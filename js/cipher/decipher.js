@@ -4,9 +4,9 @@
 var token = "";
 if (isEmpty(token)) {
     var html = '<div class="style-center" onclick="decryptHtml()" style="cursor:pointer">'
-        + '<img src="/images/000000/jiandar_00000000000000.png">'
+        + '<img src="/images/000000/img_00000000000000.png">'
         + '</div>'
-        //+ '<div class="style-center" style="font-size: 36px;">Jiandar</div>';
+        //+ '<div class="style-center" style="font-size: 36px;">Arda</div>';
     $("article.markdown").prepend(html);
     $("nav#TableOfContents").prepend("<ul></ul>");
 } else {
