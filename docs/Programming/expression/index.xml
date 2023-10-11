@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>表达式 on IWiki</title>
+    <link>https://ardadata.github.io/docs/Programming/expression/</link>
+    <description>Recent content in 表达式 on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/Programming/expression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正则表达式</title>
+      <link>https://ardadata.github.io/docs/Programming/expression/regular/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/Programming/expression/regular/</guid>
+      <description>正则表达式#简介#Regular Expression 是一种字符串匹配的描述模式，用来检索、替换那些符合某个规则的字符串 语法#转义字符#特殊字符：( ) [ ] { } 、? * + 、^ $、 . \ | 构造 匹配 x 字符 x \ 反斜线字符 \t 水平制表符 \v 垂直制表符 \r 回车符 \n 换行符 \f 换页符 普通字符类#构造 匹配 [abc] 包含：a、b 或 c [^abc] 排除：任何字符，除了 a、b 或 c [a-z] 区间：a 到 z [a-zA-Z] 并集：a 到 z 或 A 到 Z [a-z&amp;amp;&amp;amp;[^bc]] 交集：a 到 z，除了 b 和 c 预定义字符类#构造 匹配 构造 匹配 .</description>
+    </item>
+    
+    <item>
+      <title>Cron表达式</title>
+      <link>https://ardadata.github.io/docs/Programming/expression/cron/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/Programming/expression/cron/</guid>
+      <description>Cron表达式#简介#是一个具有时间含义的字符串 格式#{秒数} {分钟} {小时} {日期} {月份} {星期} {年份(可为空)} 分为 6~7 个域 ，以空格隔开。每个域可以是确定的取值，也可以是具有逻辑意义的特殊字符。 域取值#下表为各个域的取值范围及支持的特殊字符 域 允许的取值范围 允许的特殊符号 是否必填 秒 0-59 , - * / 是 分钟 0-59 , - * / 是 小时 0-23 , - * / 是 日期 1-31 , - * / ? L W 是 月份 1-12 或 JAN-DEC , - * / 是 星期 1-7 或 SUN-SAT , - * / ?</description>
+    </item>
+    
+  </channel>
+</rss>
