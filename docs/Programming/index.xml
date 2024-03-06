@@ -2,10 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>程序设计 on IWiki</title>
-    <link>https://ardadata.github.io/docs/Programming/</link>
+    <link>https://ardadata.github.io/docs/programming/</link>
     <description>Recent content in 程序设计 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/Programming/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://ardadata.github.io/docs/programming/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
