@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>并发容器 on IWiki</title>
+    <link>https://ardadata.github.io/docs/old/Java/concurrency/container/</link>
+    <description>Recent content in 并发容器 on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Java/concurrency/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ThreadLocal</title>
+      <link>https://ardadata.github.io/docs/old/Java/concurrency/container/ThreadLocal/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/Java/concurrency/container/ThreadLocal/</guid>
+      <description>ThreadLocal#概述#线程本地变量 变量在每个线程中都有独立拷贝，线程对变量的访问都是基于它自己的变量，就避免了线程不安全问题 数据隔离#ThreadLocal 类操作的是 Thread 的成员变量 threadLocals。 每个线程 Thread 都有自己的 threadLocals，从而互相不影响。 实现#每个 Thread 对象都有一个 ThreadLocalMap 映射表 ThreadLocalMap 的 key 是 ThreadLocal 实例本身，value 则存储 Object 数据 通过 ThreadLocal 对象的 get()/set() 方法进行取值/设值 方法#// 构造方法 public ThreadLocal() // 设值 public void set(T value) // 取值 public T get() 示例#public class Test { private static ThreadLocal&amp;lt;String&amp;gt; local = new ThreadLocal&amp;lt;&amp;gt;(); public static void main(String[] args) { String[] values = {&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;4&amp;#34;, &amp;#34;5&amp;#34;}; for (String value : values) { new Thread(() -&amp;gt; { String thread = Thread.</description>
+    </item>
+    
+    <item>
+      <title>BlockingQueue</title>
+      <link>https://ardadata.github.io/docs/old/Java/concurrency/container/BlockingQueue/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/Java/concurrency/container/BlockingQueue/</guid>
+      <description>BlockingQueue#BlockingQueue</description>
+    </item>
+    
+    <item>
+      <title>ConcurrentHashMap</title>
+      <link>https://ardadata.github.io/docs/old/Java/concurrency/container/ConcurrentHashMap/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/Java/concurrency/container/ConcurrentHashMap/</guid>
+      <description>ConcurrentHashMap#ConcurrentHashMap</description>
+    </item>
+    
+    <item>
+      <title>CopyOnWriteArrayList</title>
+      <link>https://ardadata.github.io/docs/old/Java/concurrency/container/CopyOnWriteArrayList/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/Java/concurrency/container/CopyOnWriteArrayList/</guid>
+      <description>CopyOnWriteArrayList#设计思想#Copy-On-Write（COW），是一种读写分离的思想 写线程写入数据的时候，会复制新建一个新容器。当数据更新完成后，再将旧容器引用指向新容器。 读线程感知数据更新是延时的，牺牲了数据实时性而保证数据最终一致性。 由于写线程写数据是在新容器写入的，因此读线程不会被阻塞。 应用场景#适用于读多写少的场景，比如系统的黑名单白名单设置 代码实现#array private transient volatile Object[] array; get public E get(int index) { return get(getArray(), index); } final Object[] getArray() { return array; } private E get(Object[] a, int index) { return (E) a[index]; } add public boolean add(E e) { final ReentrantLock lock = this.lock; //1. 使用Lock,保证写线程在同一时刻只有一个 lock.lock(); try { //2. 获取旧数组引用 Object[] elements = getArray(); int len = elements.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发工具 on IWiki</title>
+    <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/</link>
+    <description>Recent content in 开发工具 on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/ProgramBasic/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown</title>
+      <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/markdown/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/ProgramBasic/tools/markdown/</guid>
+      <description>Markdown#概述#是一种可以使用普通文本编辑器编写的 标记语言 通过简单的标记语法，它可以使普通文本内容具有一定的格式 标题#语法 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 文字#语法
+*斜体* **粗体** ***斜体粗体*** ~~删除线~~ 效果
+斜体 粗体 斜体粗体 删除线
+图片#语法
+![百度](https://www.baidu.com/img/baidu_jgylogo3.gif &amp;#34;百度一下&amp;#34;) 效果
+链接#语法
+//超链接 [百度](http://baidu.com &amp;#34;百度一下&amp;#34;) //自动链接 &amp;lt;address@example.com&amp;gt; //页内超链接 设锚点：&amp;lt;a id=&amp;#34;link&amp;#34;&amp;gt;目标位置&amp;lt;/a&amp;gt; 跳转到：[锚点](#link) 效果
+百度 address@example.com 设锚点：目标位置 跳转到：锚点
+列表#语法
+//无序列表 - item //有序列表 1. item 效果
+item item 表格#语法</description>
+    </item>
+    
+  </channel>
+</rss>

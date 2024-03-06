@@ -1,0 +1,5330 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.119.0">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zookeeper">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Zookeeper" />
+<meta property="og:description" content="Zookeeper" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/" />
+<title>Zookeeper | IWiki</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e935e20bd0d469378cb482f0958edf258c731a4f895dccd55799c6fbc8043f23.css" integrity="sha256-6TXiC9DUaTeMtILwlY7fJYxzGk&#43;JXczVV5nG&#43;8gEPyM=">
+<script defer src="/zh.search.min.a382b09560b76f5e3e05b1f426f3d64e4841742740d0fc0cab625b9013f1e61d.js" integrity="sha256-o4KwlWC3b14&#43;BbH0JvPWTkhBdCdA0PwMq2JbkBPx5h0="></script>
+<link rel="alternate" type="application/rss+xml" href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/index.xml" title="IWiki" />
+
+  
+<link rel="stylesheet" href="/css/common.css" />
+<script defer src="/js/common/jquery.min.js"></script>
+<script defer src="/js/common/jquery.cookie.min.js"></script>
+<script defer src="/js/common.js"></script>
+
+
+
+
+
+
+
+
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>IWiki</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3110560962cac834dcd3aead95e804a4" class="toggle"  />
+    <label for="section-3110560962cac834dcd3aead95e804a4" class="flex justify-between">
+      <a  class="">网络基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cfde5eb8dfa7ec3f62d4dd9a3b50f01b" class="toggle"  />
+    <label for="section-cfde5eb8dfa7ec3f62d4dd9a3b50f01b" class="flex justify-between">
+      <a  class="">网络基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e8d9f201f60e89b3bc92caae3b19fe2d" class="toggle"  />
+    <label for="section-e8d9f201f60e89b3bc92caae3b19fe2d" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/network/linux/" class="">Linux</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a432bb056edf769c9f15f6893988f152" class="toggle"  />
+    <label for="section-a432bb056edf769c9f15f6893988f152" class="flex justify-between">
+      <a  class="">开发工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a6580342ddeb52c18d8cd21beec63c8c" class="toggle"  />
+    <label for="section-a6580342ddeb52c18d8cd21beec63c8c" class="flex justify-between">
+      <a  class="">Idea</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>—</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-57e58ca5aae968f4961a4036f314a5de" class="toggle"  />
+    <label for="section-57e58ca5aae968f4961a4036f314a5de" class="flex justify-between">
+      <a  class="">程序设计</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9171d1b3d4f43da14604cd066b8852b6" class="toggle"  />
+    <label for="section-9171d1b3d4f43da14604cd066b8852b6" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/programming/data_structure/" class="">数据结构</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f4e0a1e56d9e4991f52eb42fb757323" class="toggle"  />
+    <label for="section-8f4e0a1e56d9e4991f52eb42fb757323" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/programming/data_algorithm/" class="">数据算法</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5de58607611a54ab76b2bb13f2a88664" class="toggle"  />
+    <label for="section-5de58607611a54ab76b2bb13f2a88664" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/programming/design_pattern/" class="">设计模式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e4b7cd863bd52996cfabba4afea90ef" class="toggle"  />
+    <label for="section-9e4b7cd863bd52996cfabba4afea90ef" class="flex justify-between">
+      <a  class="">开源框架</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e28cc33fe5745d14abf4a0147d0624a5" class="toggle"  />
+    <label for="section-e28cc33fe5745d14abf4a0147d0624a5" class="flex justify-between">
+      <a  class="">数据存储</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e93f6e4f1239bf01dc0cbed76c64ccca" class="toggle"  />
+    <label for="section-e93f6e4f1239bf01dc0cbed76c64ccca" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/database/mysql/" class="">MySQL</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>—</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eca69da21de5b0cd25d8421dec09a327" class="toggle"  />
+    <label for="section-eca69da21de5b0cd25d8421dec09a327" class="flex justify-between">
+      <a  class="">Java</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-197db6bcac5ea0eafcb283f4889907f1" class="toggle"  />
+    <label for="section-197db6bcac5ea0eafcb283f4889907f1" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/java/jvm/" class="">JVM</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0c7b610f24430052fb75d6894b0c1fc" class="toggle"  />
+    <label for="section-c0c7b610f24430052fb75d6894b0c1fc" class="flex justify-between">
+      <a  class="">基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>—</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7fa191d50bf3a019cb6fda24297729b4" class="toggle" checked />
+    <label for="section-7fa191d50bf3a019cb6fda24297729b4" class="flex justify-between">
+      <a  class="">old</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3a5275fb23228cd14fbf57e397466c28" class="toggle"  />
+    <label for="section-3a5275fb23228cd14fbf57e397466c28" class="flex justify-between">
+      <a  class="">编程基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-db0bb1e5ac4b07a388d3ac78069fe5b8" class="toggle"  />
+    <label for="section-db0bb1e5ac4b07a388d3ac78069fe5b8" class="flex justify-between">
+      <a  class="">计算机基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/basic/" class="">基础知识</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/network-model/" class="">网络模型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/framework-evolution/" class="">架构演进</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/tcp-ip/" class="">TCP/IP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/http/" class="">HTTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/computer/question-answer/" class="">Q&amp;A</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cc4f61b088e8250373e39523955208cb" class="toggle"  />
+    <label for="section-cc4f61b088e8250373e39523955208cb" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/" class="">开发工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fbe558466aea08b31e3d5e8ef9293b77" class="toggle"  />
+    <label for="section-fbe558466aea08b31e3d5e8ef9293b77" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/" class="">Gradle</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/config/" class="">配置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-afe1a02fc7e3ddb3014b5d2047080407" class="toggle"  />
+    <label for="section-afe1a02fc7e3ddb3014b5d2047080407" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/git/" class="">Git</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/git/version-control/" class="">版本控制</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/git/basic-logic/" class="">运行原理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/git/basic-command/" class="">基本命令</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/git/git-operate/" class="">Git 使用</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/ProgramBasic/tools/markdown/" class="">Markdown</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-976c48d7a4a1f957187456f603a17327" class="toggle"  />
+    <label for="section-976c48d7a4a1f957187456f603a17327" class="flex justify-between">
+      <a  class="">程序设计</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bf1e4f3c86efd0bfed8e7b88972f59f3" class="toggle"  />
+    <label for="section-bf1e4f3c86efd0bfed8e7b88972f59f3" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/data-structure/" class="">数据结构</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/array/" class="">数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/linked-list/" class="">链表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/stack/" class="">栈</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/queue/" class="">队列</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/hash/" class="">散列表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/tree/" class="">树</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/heap/" class="">堆</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/data-structure/graph/" class="">图</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7f2b301d711fd4d5512ddbfe1ed9506a" class="toggle"  />
+    <label for="section-7f2b301d711fd4d5512ddbfe1ed9506a" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/algorithm/" class="">程序算法</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/time-complexity/" class="">时间复杂度</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-033450c06f9541865be5ed8003942cae" class="toggle"  />
+    <label for="section-033450c06f9541865be5ed8003942cae" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/" class="">排序算法</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/bubble/" class="">冒泡排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/selection/" class="">选择排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/insertion/" class="">插入排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/merge/" class="">归并排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/quick/" class="">快速排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/shell/" class="">希尔排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/counting/" class="">计数排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/radix/" class="">基数排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/bucket/" class="">桶排序</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/sort/heap/" class="">堆排序</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caba3ab3b4408c72a0b1690b64151245" class="toggle"  />
+    <label for="section-caba3ab3b4408c72a0b1690b64151245" class="flex justify-between">
+      <a  class="">查找算法</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/algorithm/search/binary/" class="">二分查找</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a95fdefab9bff096405e5f01c38aae2e" class="toggle"  />
+    <label for="section-a95fdefab9bff096405e5f01c38aae2e" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/" class="">设计模式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9b801e9a93091e7b7b79a57ce6c506e0" class="toggle"  />
+    <label for="section-9b801e9a93091e7b7b79a57ce6c506e0" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/creational/" class="">创建型</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/creational/01-singleton/" class="">单例模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/creational/02-factory/" class="">工厂模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/creational/04-prototype/" class="">原型模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/creational/05-builder/" class="">建造者模式</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-74ed6f46428fe3718fb08ebaa734a820" class="toggle"  />
+    <label for="section-74ed6f46428fe3718fb08ebaa734a820" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/" class="">结构型</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/06-proxy/" class="">代理模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/07-bridge/" class="">桥接模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/08-facade/" class="">外观模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/09-composite/" class="">组合模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/10-flyweight/" class="">享元模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/11-adapter/" class="">适配器模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/structural/12-decorator/" class="">装饰器模式</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d77b956b035932758dbf100ba0414c0d" class="toggle"  />
+    <label for="section-d77b956b035932758dbf100ba0414c0d" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/" class="">行为型</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/13-state/" class="">状态模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/14-strategy/" class="">策略模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/15-template/" class="">模板模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/16-command/" class="">命令模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/17-iterator/" class="">迭代器模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/18-interpreter/" class="">解释器模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/19-observer/" class="">观察者模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/20-visitor/" class="">访问者模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/21-mediator/" class="">中介者模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/22-memento/" class="">备忘录模式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/design-pattern/behavioural/23-chainOfResponsibility/" class="">职责链模式</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ed7d6c848a9290e50287fdf8c4481acc" class="toggle"  />
+    <label for="section-ed7d6c848a9290e50287fdf8c4481acc" class="flex justify-between">
+      <a  class="">表达式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/expression/regular/" class="">正则表达式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Programming/expression/cron/" class="">Cron表达式</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-45ccfaee3d2b73d192d529a471f371c8" class="toggle" checked />
+    <label for="section-45ccfaee3d2b73d192d529a471f371c8" class="flex justify-between">
+      <a  class="">框架工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d4614b49a205b677467a3f90b788604" class="toggle"  />
+    <label for="section-6d4614b49a205b677467a3f90b788604" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/" class="">核心框架</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-396737ec03e945ab72f0284450634f7d" class="toggle"  />
+    <label for="section-396737ec03e945ab72f0284450634f7d" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/" class="">Spring</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9439b6152a83cb9831d0f998a1b0063a" class="toggle"  />
+    <label for="section-9439b6152a83cb9831d0f998a1b0063a" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/ioc/" class="">IoC</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/ioc/bean/" class="">Bean</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/ioc/bean-definition/" class="">Bean 定义</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/ioc/bean-injection/" class="">Bean 注入</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f8a2c30934dc6128255cd5d6d553298" class="toggle"  />
+    <label for="section-1f8a2c30934dc6128255cd5d6d553298" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/aop/" class="">AOP</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/spring/aop/AspectJ/" class="">切面编程</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-15778f8320ca2fa2d32c036bdcefa65d" class="toggle"  />
+    <label for="section-15778f8320ca2fa2d32c036bdcefa65d" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/springmvc/" class="">Spring MVC</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/springmvc/RESTful/" class="">RESTful</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/springmvc/workflow/" class="">工作流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/springmvc/params-bind/" class="">参数绑定</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a766048f777c949aed755955f6aa4cd4" class="toggle"  />
+    <label for="section-a766048f777c949aed755955f6aa4cd4" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/kafka/" class="">Kafka</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/kafka/mq/" class="">MQ</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/frameworks/kafka/work-principle/" class="">工作原理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-67196b3492ca0fa5fa5f06ae57805b39" class="toggle"  />
+    <label for="section-67196b3492ca0fa5fa5f06ae57805b39" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/middleware/" class="">中间件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f6ad8551e8a664137a30bf4647760be3" class="toggle"  />
+    <label for="section-f6ad8551e8a664137a30bf4647760be3" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/" class="">Quartz</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/core-class/" class="">核心类</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/demo/" class="">示例</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2d2acbf3d9d011e2dc1ec6e7c53e80af" class="toggle"  />
+    <label for="section-2d2acbf3d9d011e2dc1ec6e7c53e80af" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/distribution/" class="">分布式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e1699a9304aea004407fbc5218db846a" class="toggle" checked />
+    <label for="section-e1699a9304aea004407fbc5218db846a" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/" class="">微服务</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f6c272b0a24be21eba7aca3bf33f4d7" class="toggle"  />
+    <label for="section-1f6c272b0a24be21eba7aca3bf33f4d7" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/distributed/" class="">分布式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0a9bcd801b867a2b568ab46047d673d6" class="toggle"  />
+    <label for="section-0a9bcd801b867a2b568ab46047d673d6" class="flex justify-between">
+      <a  class="">日落组件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/eureka/" class="">Eureka</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/ribbon/" class="">Ribbon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/feign/" class="">Feign</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/hystrix/" class="">Hystrix</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/zuul/" class="">Zuul</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/deprecated-frame/config/" class="">Config</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c31df2d9715e66369671d907197892b8" class="toggle"  />
+    <label for="section-c31df2d9715e66369671d907197892b8" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/springboot/" class="">Spring Boot</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/springboot/work-principle/" class="">工作原理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/springcloud/" class="">Spring Cloud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c20551351eadcfad8f4c9a2268d4a805" class="toggle" checked />
+    <label for="section-c20551351eadcfad8f4c9a2268d4a805" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/" class="active">Zookeeper</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/work-principle/" class="">工作原理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/elect-leader/" class="">选举机制</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-305ab2355166ee91d0b635814efde900" class="toggle"  />
+    <label for="section-305ab2355166ee91d0b635814efde900" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/dubbo/" class="">Dubbo</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/dubbo/rpc/" class="">RPC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/dubbo/work-principle/" class="">工作原理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4983f55946a75ccea62a3d765e78abba" class="toggle"  />
+    <label for="section-4983f55946a75ccea62a3d765e78abba" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/FrameworkTools/bigdata/" class="">大数据</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-09b85e310960a44572ce6570f6a87c25" class="toggle"  />
+    <label for="section-09b85e310960a44572ce6570f6a87c25" class="flex justify-between">
+      <a  class="">数据存储</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ed91b21bd5176665acc05daf22cda8c" class="toggle"  />
+    <label for="section-9ed91b21bd5176665acc05daf22cda8c" class="flex justify-between">
+      <a  class="">个人中心</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8c23ae07eca69da83b5c052ccdf22b" class="toggle"  />
+    <label for="section-3c8c23ae07eca69da83b5c052ccdf22b" class="flex justify-between">
+      <a  class="">人际交往</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/intercourse/be-in-love/" class="">谈恋爱</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9dc5e1d6d9a76fe5330034bad8313012" class="toggle"  />
+    <label for="section-9dc5e1d6d9a76fe5330034bad8313012" class="flex justify-between">
+      <a  class="">求职就业</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/career-plan/" class="">职业规划</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/resume-edit/" class="">简历编写</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d5a029e88b6d8fda8b4307871ac7029a" class="toggle"  />
+    <label for="section-d5a029e88b6d8fda8b4307871ac7029a" class="flex justify-between">
+      <a  class="">面试求职</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/interview/before-interview/" class="">准备工作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/interview/interview/" class="">面试过程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/interview/salary/" class="">薪资待遇</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/interview/after-interview/" class="">收尾工作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/interview/interview-question/" class="">面试问题</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/employment/offer/" class="">offer</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2f9687079be15352f884523b0b1c1953" class="toggle"  />
+    <label for="section-2f9687079be15352f884523b0b1c1953" class="flex justify-between">
+      <a  class="">关于我</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/myself/self-introduction/" class="">自我介绍</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/user-center/myself/project-experience/" class="">项目经验</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ea416382700112510360d0e9a70da729" class="toggle"  />
+    <label for="section-ea416382700112510360d0e9a70da729" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/mysql/" class="">MySQL</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-40507f5e321b0f1e4e56dc1d97761509" class="toggle"  />
+    <label for="section-40507f5e321b0f1e4e56dc1d97761509" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/mysql/basic/" class="">基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/basic/dataType-operator/" class="">数据类型、运算符</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/basic/variable-function/" class="">变量、函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/basic/column-attribute/" class="">列属性</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/basic/sentence/" class="">语句</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fd506003d7cb210d035517b0d8ee99f2" class="toggle"  />
+    <label for="section-fd506003d7cb210d035517b0d8ee99f2" class="flex justify-between">
+      <a  class="">基础命令</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-command/database/" class="">数据库管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-command/table/" class="">数据表管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-command/line/" class="">数据行管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-command/composite-query/" class="">复合查询</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eddcb686f857e7e8e8ea063dd3010c27" class="toggle"  />
+    <label for="section-eddcb686f857e7e8e8ea063dd3010c27" class="flex justify-between">
+      <a  class="">高级特性</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/database-engine/" class="">数据库引擎</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/user-auth/" class="">用户权限</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/store-procedure/" class="">存储过程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/trigger/" class="">触发器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/mysql-index/" class="">索引</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/view/" class="">视图</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/advanced-feature/transaction/" class="">事务</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a9957e1ad85ec2e6cecdc8d600422698" class="toggle"  />
+    <label for="section-a9957e1ad85ec2e6cecdc8d600422698" class="flex justify-between">
+      <a  class="">性能调优</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-tuning/table-tuning/" class="">表结构优化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-tuning/index-tuning/" class="">索引优化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-tuning/engine-tuning/" class="">引擎优化</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/mysql/mysql-tuning/sql-tuning/" class="">SQL优化</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e9f7b2638133816837db93527126141a" class="toggle"  />
+    <label for="section-e9f7b2638133816837db93527126141a" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/oracle/" class="">Oracle</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/system-function/" class="">系统函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/system-table/" class="">系统表</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5dbce68bdf6c27b2d2931e4592665d80" class="toggle"  />
+    <label for="section-5dbce68bdf6c27b2d2931e4592665d80" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/" class="">PL/SQL</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/basic-syntax/" class="">基本语法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/data-types/" class="">数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/control-sentence/" class="">控制语句</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/exception/" class="">异常处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/transaction/" class="">事务处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/object-oriented/" class="">面向对象</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/trigger/" class="">触发器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/function/" class="">函数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/procedure/" class="">过程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/cursor/" class="">游标</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/package/" class="">包</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e2867d88b75c816b2136385900361d43" class="toggle"  />
+    <label for="section-e2867d88b75c816b2136385900361d43" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/redis/" class="">Redis</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8adc285c232e3b90cd1d6845c5367fa0" class="toggle"  />
+    <label for="section-8adc285c232e3b90cd1d6845c5367fa0" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/DataStore/redis/persistence/" class="">持久化</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/redis/persistence/RDB/" class="">RDB</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/redis/persistence/AOF/" class="">AOF</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/DataStore/redis/data-type/" class="">数据类型</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e511a862d7b86a2ff8b8e7187b55b56d" class="toggle"  />
+    <label for="section-e511a862d7b86a2ff8b8e7187b55b56d" class="flex justify-between">
+      <a  class="">面试题</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f39ff44e618e1ff0b7ff9d8554b7f785" class="toggle"  />
+    <label for="section-f39ff44e618e1ff0b7ff9d8554b7f785" class="flex justify-between">
+      <a  class="">Java 基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Interview/java-basic/summary/" class="">Java概述</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Interview/java-basic/basic-grammar/" class="">基础语法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Interview/java-basic/container/" class="">集合容器</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-023f4a345f0a1746a187a6e512d2ee56" class="toggle"  />
+    <label for="section-023f4a345f0a1746a187a6e512d2ee56" class="flex justify-between">
+      <a  class="">Java 进阶</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-915b340422e895fa5ed782a1d733dec5" class="toggle"  />
+    <label for="section-915b340422e895fa5ed782a1d733dec5" class="flex justify-between">
+      <a  class="">框架工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6aadb19faa5590a324e128d51d83df04" class="toggle"  />
+    <label for="section-6aadb19faa5590a324e128d51d83df04" class="flex justify-between">
+      <a  class="">Java</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-124d932c05c35974fa15f781eddc565f" class="toggle"  />
+    <label for="section-124d932c05c35974fa15f781eddc565f" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/" class="">基础语法</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/syntax-element/" class="">语法元素</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/data-type/" class="">数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/process-control/" class="">流程控制</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/array/" class="">数组</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-syntax/method/" class="">方法</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d043d1b738d64270f2918eb473f9c2f1" class="toggle"  />
+    <label for="section-d043d1b738d64270f2918eb473f9c2f1" class="flex justify-between">
+      <a  class="">面向对象</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/oop/class/" class="">类和对象</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/oop/encapsulation/" class="">封装</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/oop/Inheritance/" class="">继承</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/oop/polymorphism/" class="">多态</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/oop/abstraction/" class="">抽象</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6b86edec97bed76f3f81e20affdd74ce" class="toggle"  />
+    <label for="section-6b86edec97bed76f3f81e20affdd74ce" class="flex justify-between">
+      <a  class="">集合容器</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-87e25640a7daff9e75fc733f3a8e190f" class="toggle"  />
+    <label for="section-87e25640a7daff9e75fc733f3a8e190f" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/container/Map/" class="">Map</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Map/TreeMap/" class="">TreeMap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Map/HashMap/" class="">HashMap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Map/HashTable/" class="">HashTable</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Map/LinkedHashMap/" class="">LinkedHashMap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Map/ConcurrentHashMap/" class="">ConcurrentHashMap</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-68a6c8fadbd6e3456c33ffbef72cc26a" class="toggle"  />
+    <label for="section-68a6c8fadbd6e3456c33ffbef72cc26a" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/container/List/" class="">List</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/List/Vector/" class="">Vector</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/List/ArrayList/" class="">ArrayList</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/List/LinkedList/" class="">LinkedList</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89a36fe747273508736550e84e42a1de" class="toggle"  />
+    <label for="section-89a36fe747273508736550e84e42a1de" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/container/Set/" class="">Set</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Set/TreeSet/" class="">TreeSet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Set/HashSet/" class="">HashSet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Set/LinkedHashSet/" class="">LinkedHashSet</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5d6116a6ffca19972122090baf235582" class="toggle"  />
+    <label for="section-5d6116a6ffca19972122090baf235582" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/container/Queue/" class="">Queue</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/container/Queue/BlockingQueue/" class="">BlockingQueue</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6e7e495eefc46d7f76891726214df273" class="toggle"  />
+    <label for="section-6e7e495eefc46d7f76891726214df273" class="flex justify-between">
+      <a  class="">通用类库</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-class/jdbc/" class="">JDBC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5908423b8140d885357effe5224343d8" class="toggle"  />
+    <label for="section-5908423b8140d885357effe5224343d8" class="flex justify-between">
+      <a  class="">语言特性</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-720eb46c3b912b615847b4af1917df74" class="toggle"  />
+    <label for="section-720eb46c3b912b615847b4af1917df74" class="flex justify-between">
+      <a  class="">Java</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java/exception/" class="">异常处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java/reflection/" class="">反射机制</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c5a24962a3d15ec21b54106c09c17793" class="toggle"  />
+    <label for="section-c5a24962a3d15ec21b54106c09c17793" class="flex justify-between">
+      <a  class="">Java5</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c113526f2b09dc6f92094150d50dbc68" class="toggle"  />
+    <label for="section-c113526f2b09dc6f92094150d50dbc68" class="flex justify-between">
+      <a  class="">Java8</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java8/lambda/" class="">Lambda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java8/method-reference/" class="">方法引用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java8/functional-interface/" class="">函数式接口</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java8/stream-api/" class="">Java8 Stream</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/basic-feature/Java8/time-api/" class="">Java8 Time</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5a38a643f2fccf35b04ee1899a2f784e" class="toggle"  />
+    <label for="section-5a38a643f2fccf35b04ee1899a2f784e" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/concurrency/" class="">并发编程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-43226706066ea6ff989d6dd6aa9c5691" class="toggle"  />
+    <label for="section-43226706066ea6ff989d6dd6aa9c5691" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/concurrency/thread/" class="">线程基础</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/thread/thread-create/" class="">创建线程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/thread/thread-stop/" class="">停止线程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/thread/thread-daemon/" class="">守护线程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/thread/thread-state/" class="">线程状态</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2146876e39c9304205d386135eb79c27" class="toggle"  />
+    <label for="section-2146876e39c9304205d386135eb79c27" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/" class="">并发理论</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/JMM/" class="">Java 内存模型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/synchronized/" class="">synchronized</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/volatile/" class="">volatile</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/final/" class="">final</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/theory/CAS/" class="">CAS</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2927c141e26f2efbb698816ead8fd90c" class="toggle"  />
+    <label for="section-2927c141e26f2efbb698816ead8fd90c" class="flex justify-between">
+      <a  class="">并发容器</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/container/ThreadLocal/" class="">ThreadLocal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/container/BlockingQueue/" class="">BlockingQueue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/container/ConcurrentHashMap/" class="">ConcurrentHashMap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/container/CopyOnWriteArrayList/" class="">CopyOnWriteArrayList</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-36798d9ddfb1ee01e071d4e79783b3a5" class="toggle"  />
+    <label for="section-36798d9ddfb1ee01e071d4e79783b3a5" class="flex justify-between">
+      <a  class="">并发工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/tool/CountDownLatch/" class="">CountDownLatch</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/tool/CyclicBarrier/" class="">CyclicBarrier</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/tool/Semaphore/" class="">Semaphore</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/tool/Exchanger/" class="">Exchanger</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-857d482f93600d98314a90b15ca53cfb" class="toggle"  />
+    <label for="section-857d482f93600d98314a90b15ca53cfb" class="flex justify-between">
+      <a  class="">锁体系</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/concurrency-lock/" class="">锁</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/aqs/" class="">AQS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/ReentrantLock/" class="">ReentrantLock</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/ReentrantReadWriteLock/" class="">ReentrantReadWrite...</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/Condition/" class="">Condition</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/lock/LockSupport/" class="">LockSupport</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3bfea47de99078bb90721313e38b765e" class="toggle"  />
+    <label for="section-3bfea47de99078bb90721313e38b765e" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/" class="">线程池</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/threadpool-theory/" class="">线程池 - 原理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/threadpool-type/" class="">线程池 - 种类</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/threadpool-operate/" class="">线程池 - 操作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/ScheduledThreadPoolExecutor/" class="">定时线程池</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/threadpool/FutureTask/" class="">FutureTask</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d20079a5f408f08508d9f78ffe1d746a" class="toggle"  />
+    <label for="section-d20079a5f408f08508d9f78ffe1d746a" class="flex justify-between">
+      <a  class="">并发问题</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/problem/deadlock/" class="">死锁</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/concurrency/problem/ConcurrentModificationException/" class="">并发修改异常</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4d1e49d9a2e9e61afd933797e258c57c" class="toggle"  />
+    <label for="section-4d1e49d9a2e9e61afd933797e258c57c" class="flex justify-between">
+      <a  class="">IO / NIO</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/io-nio/io/" class="">IO 流</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/io-nio/nio/" class="">NIO</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0ef1ff5fc4e33be83300d6352f716f24" class="toggle"  />
+    <label for="section-0ef1ff5fc4e33be83300d6352f716f24" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/jvm/" class="">虚拟机</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8f9ebacaef396b64fe31865bb76ba576" class="toggle"  />
+    <label for="section-8f9ebacaef396b64fe31865bb76ba576" class="flex justify-between">
+      <a  class="">类加载</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/class-load/loader/" class="">加载器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/class-load/load-process/" class="">加载过程</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/memory-structure/" class="">内存结构</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a84e2db434fb94037f8670d1160996b9" class="toggle"  />
+    <label for="section-a84e2db434fb94037f8670d1160996b9" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/Java/jvm/gc/" class="">垃圾回收</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/gc/reference-type/" class="">引用类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/gc/judge/" class="">判定算法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/gc/collect/" class="">回收算法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/gc/collector/" class="">垃圾收集器</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2bfed388e69c0b22df5f1f2a177c987e" class="toggle"  />
+    <label for="section-2bfed388e69c0b22df5f1f2a177c987e" class="flex justify-between">
+      <a  class="">JVM 调优</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/tuning/parameter/" class="">JVM 参数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/Java/jvm/tuning/oom/" class="">OOM 问题</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-da7ca00d8a9bdc2f54c79353bccfc6c8" class="toggle"  />
+    <label for="section-da7ca00d8a9bdc2f54c79353bccfc6c8" class="flex justify-between">
+      <a  class="">WebPage</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c3e082f298dd24b69d0857a65c08700d" class="toggle"  />
+    <label for="section-c3e082f298dd24b69d0857a65c08700d" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/WebPage/html/" class="">HTML</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/document/" class="">文档标签</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/text/" class="">文本标签</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/list/" class="">列表标签</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/link/" class="">链接标签</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/table/" class="">表格标签</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/html/form/" class="">表单标签</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9b6b3693a727059c49ec890e8ce5b44f" class="toggle"  />
+    <label for="section-9b6b3693a727059c49ec890e8ce5b44f" class="flex justify-between">
+      <a  class="">CSS</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/basic/" class="">CSS 基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e47e4e556420ad186253d27058c3ee3a" class="toggle"  />
+    <label for="section-e47e4e556420ad186253d27058c3ee3a" class="flex justify-between">
+      <a  class="">CSS 样式</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/style/font/" class="">字体样式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/style/text/" class="">文本样式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/style/list/" class="">列表样式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/style/background/" class="">背景样式</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1033320bd2109ccf16941b5e9b5772c7" class="toggle"  />
+    <label for="section-1033320bd2109ccf16941b5e9b5772c7" class="flex justify-between">
+      <a  class="">CSS 位置</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/position/border/" class="">边</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/position/width-height/" class="">宽高</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/position/position/" class="">定位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/position/float/" class="">浮动</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ardadata.github.io/docs/old/WebPage/css/selector/" class="">CSS 选择器</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3dbae78d6033c550686e664830672182" class="toggle"  />
+    <label for="section-3dbae78d6033c550686e664830672182" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/WebPage/js/" class="">JS</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b484c04c3e4b5bdab2962aa1db0b7f7b" class="toggle"  />
+    <label for="section-b484c04c3e4b5bdab2962aa1db0b7f7b" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/WebPage/ajax/" class="">AJAX</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9933116b5d186467d48d9671c35f2a40" class="toggle"  />
+    <label for="section-9933116b5d186467d48d9671c35f2a40" class="flex justify-between">
+      <a href="https://ardadata.github.io/docs/old/WebPage/vue/" class="">Vue</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Zookeeper</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zookeeper">Zookeeper</a></li>
+        <li><a href="#特点">特点</a></li>
+        <li><a href="#应用">应用</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h3 id="zookeeper">
+  Zookeeper
+  <a class="anchor" href="#zookeeper">#</a>
+</h3>
+<ul>
+<li>是一个开源的，分布式的，为分布式应用提供协调服务的框架</li>
+</ul>
+<h3 id="特点">
+  特点
+  <a class="anchor" href="#%e7%89%b9%e7%82%b9">#</a>
+</h3>
+<ul>
+<li>由一个领导者（leader）和多个跟随者（follower）组成集群</li>
+<li>集群只要有半数以上节点存活，就能正常服务</li>
+<li>数据一致性：每个server保存一份相同的数据副本，client无论连接到哪个server，数据都是一致的。</li>
+<li>请求顺序性：来自同一个client的更新请求按其发送顺序依次执行。</li>
+<li>原子性：一次数据更新要么成功，要么失败。</li>
+<li>实时性：在一定时间范围内，client能读到最新数据。</li>
+</ul>
+<h3 id="应用">
+  应用
+  <a class="anchor" href="#%e5%ba%94%e7%94%a8">#</a>
+</h3>
+<ul>
+<li>统一命名服务</li>
+<li>统一配置管理</li>
+<li>统一集群管理</li>
+<li>服务器节点动态上下线</li>
+<li>软负载均衡等</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  
+
+
+<div class="flex flex-wrap justify-center">
+  
+  
+
+
+  
+  
+
+  
+  <div class="copyright">
+    Copyright © 2023-2024
+    <a class="copyright" href="mailto:gxgl8811@163.com" target="_blank" title='EmailTo: gxgl8811@163.com'>
+      <strong>IDaaKit</strong>
+    </a>
+  </div>
+
+  
+  
+
+  
+  
+</div>
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#zookeeper">Zookeeper</a></li>
+        <li><a href="#特点">特点</a></li>
+        <li><a href="#应用">应用</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quartz on IWiki</title>
+    <link>https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/</link>
+    <description>Recent content in Quartz on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>核心类</title>
+      <link>https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/core-class/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/core-class/</guid>
+      <description>核心类#Job#任务接口
+承载着要被执行的具体业务逻辑
+该接口中定义了 execute 方法，我们需要在里面编写任务执行的业务逻辑。
+JobDetail#任务实例 负责定义任务数据，为 Job 实例提供了许多属性，存储着 Job 实例的状态信息 调度器每次执行 Job 时，都会根据 JobDetail 创建一个新的 Job 实例，以规避并发访问的问题。 // 重要属性 JobDataMap jobDataMap = jobDetail.getJobDataMap(); String name = jobDetail.getKey().getName(); String group = jobDetail.getKey().getGroup(); String jobName = jobDetail.getJobClass().getName(); Trigger#触发器 描述触发任务执行的时间规则 // 按简单时间规则执行调度 SimpleTrigger // 按Cron表达式定义的时间规则执行调度 CronTrigger： Scheduler#调度器 相当于一个容器，装载着任务和触发器。基于 Trigger 触发器，来执行 Job 任务 Trigger 和 JobDetail 可以注册到 Scheduler 中，两者在 Scheduler 中拥有各自的组及名称。 Listener#监听器 // 监听任务执行前事件、任务执行后事件； JobListener： // 监听触发前事件，出发后事件； TriggerListener： JobDataMap#可以存储不限量的数据对象，在job实例执行的时候，可以使用其中的数据 // 将job加入到scheduler之前，在构建JobDetail时，可以将数据放入JobDataMap JobDetail job = newJob(DumbJob.</description>
+    </item>
+    
+    <item>
+      <title>示例</title>
+      <link>https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/demo/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/FrameworkTools/middleware/quartz/demo/</guid>
+      <description>示例#Job#@Slf4j @PersistJobDataAfterExecution public class TestJob implements Job { @Override public void execute(JobExecutionContext jobExecutionContext){ System.out.println(&amp;#34;TestJob 执行啦&amp;#34;); } } Scheduler#@Slf4j public class TestScheduler { public static void main(String[] args) throws Exception { // 获取任务调度的实例 Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler(); // 定义任务调度实例, 并与TestJob绑定 JobDetail jobDetail = JobBuilder.newJob(TestJob.class) .usingJobData(&amp;#34;executeCount&amp;#34;, 0) .withIdentity(&amp;#34;testJob&amp;#34;, &amp;#34;testJobGroup&amp;#34;) .build(); // 定义触发器, 会马上执行一次, 接着5秒执行一次 Date endTime = new Date(); endTime.setTime(endTime.getTime()+5000); Trigger trigger = TriggerBuilder.newTrigger() .usingJobData(&amp;#34;testInfo&amp;#34;, &amp;#34;trigger数据存放&amp;#34;) .</description>
+    </item>
+    
+  </channel>
+</rss>

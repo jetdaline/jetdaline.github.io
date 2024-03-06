@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on IWiki</title>
+    <link>https://ardadata.github.io/docs/network/linux/</link>
+    <description>Recent content in Linux on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://ardadata.github.io/docs/network/linux/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

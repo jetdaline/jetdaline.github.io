@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on IWiki</title>
+    <link>https://ardadata.github.io/docs/old/WebPage/css/</link>
+    <description>Recent content in CSS on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/WebPage/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS 基础</title>
+      <link>https://ardadata.github.io/docs/old/WebPage/css/basic/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/WebPage/css/basic/</guid>
+      <description>CSS 基础#CSS#Cascading Style Sheets，层叠样式表 使网页内容与表现相分离，简化网页代码，提高页面浏览速度 层叠样式#HTML 同一元素，可以定义多个样式 HTML 子元素，会继承其父元素的CSS样式 样式不冲突时，多个样式效果可叠加；样式冲突时，按样式的优先级来显示 语法规则#CSS规则，由选择器、声明组成 注释：/*注释语句*/ 引入方式#外部样式表 内部样式表 内联样式 //外部样式表：在网页头部引入 &amp;lt;head&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;XXX.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; //内部样式表：在网页头部，定义样式表 &amp;lt;head&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; p {color:red;} ... &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; //内联颜色表：在相关标签内，定义style属性 &amp;lt;p style=&amp;#34;color:red;&amp;#34;&amp;gt;这是一个段落。&amp;lt;/p&amp;gt; 基础单位#尺寸：size#值 说明 备注 % 百分比 in 英寸 25.4 mm cm 厘米 10 mm mm 毫米 1 mm pt 磅/点，Point 0.35 mm pc 派卡，Pica 4.</description>
+    </item>
+    
+    <item>
+      <title>CSS 选择器</title>
+      <link>https://ardadata.github.io/docs/old/WebPage/css/selector/</link>
+      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/WebPage/css/selector/</guid>
+      <description>CSS 选择器#选择器大全#CSS 选择器 简单选择器#选择器 示例 示例说明 * * 选择所有元素 #id #firstname 选择所有id=&amp;ldquo;firstname&amp;quot;的元素 .class .intro 选择所有class=&amp;ldquo;intro&amp;quot;的元素 标签选择器#选择器 示例 示例说明 element p 选择所有 &amp;lt;p&amp;gt; 元素 element,element div,p 选择所有 &amp;lt;div&amp;gt; 元素和 &amp;lt;p&amp;gt; 元素 element element div p 选择 &amp;lt;div&amp;gt; 元素内的所有 &amp;lt;p&amp;gt; 元素 element&amp;gt;element div&amp;gt;p 选择所有父级是 &amp;lt;div&amp;gt; 元素的 &amp;lt;p&amp;gt; 元素 element+element div+p 选择所有紧跟在 &amp;lt;div&amp;gt; 元素之后的第一个 &amp;lt;p&amp;gt; 元素 element~element div~p 选择 &amp;lt;div&amp;gt; 元素之后的每一个 &amp;lt;p&amp;gt; 元素 属性选择器#选择器 示例 示例说明 [attribute] [target] 选择带有 target 属性的所有元素 [attribute=value] [target=-blank] 选择使用 target=&amp;quot;-blank&amp;rdquo; 的所有元素 [attribute~=value] [title~=flower] 选择标题属性包含单词 &amp;ldquo;flower&amp;rdquo; 的所有元素 [attribute|=value] [lang|=en] 选择 lang 属性等于 en，或者以 en- 为开头的所有元素 [attribute^=value] a[src^=&amp;ldquo;https&amp;rdquo;] 选择每一个 src 属性的值以 &amp;ldquo;https&amp;rdquo; 开头的 &amp;lt;a&amp;gt; 元素 [attribute$=value] a[src$=&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

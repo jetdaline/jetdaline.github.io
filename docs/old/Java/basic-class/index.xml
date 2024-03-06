@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>通用类库 on IWiki</title>
+    <link>https://ardadata.github.io/docs/old/Java/basic-class/</link>
+    <description>Recent content in 通用类库 on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Java/basic-class/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JDBC</title>
+      <link>https://ardadata.github.io/docs/old/Java/basic-class/jdbc/</link>
+      <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ardadata.github.io/docs/old/Java/basic-class/jdbc/</guid>
+      <description>JDBC#概述#Java Data Base Connectivity，java 数据库连接 是一种用于执行 sql 语句的 java API，可以为多种关系数据库提供统一访问。 相关API#java.sql.Driver 数据库驱动，由数据库厂商提供具体实现 java.sql.DriverManager 数据库驱动管理器 java.sql.Connection 数据库连接 java.sql.Statement SQL语句对象 java.sql.ResultSet 数据库结果集 连接步骤#加载驱动
+Class.forName(&amp;#34;com.mysql.jdbc.Driver&amp;#34;); 建立连接
+String user = &amp;#34;xxx&amp;#34;; String password = &amp;#34;xxx&amp;#34;; String url = &amp;#34;jdbc:mysql://127.0.0.1:3306/xxx?useUnicode=true&amp;#34;; Connection conn = DriverManager.getConnection(url, user, password); 创建 Statement
+String sql =&amp;#34;SELECT * FROM catalog_info WHERE catalog_name=?&amp;#34;; PreparedStatement prs = conn.prepareStatement(sql); prs.setString(1, &amp;#34;JavaSE&amp;#34;); 执行sql语句，获取结果集
+ResultSet res = prs.</description>
+    </item>
+    
+  </channel>
+</rss>
