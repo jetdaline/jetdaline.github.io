@@ -2,107 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PL/SQL on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/</link>
+    <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/</link>
     <description>Recent content in PL/SQL on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/DataStore/oracle/plsql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基本语法</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/basic-syntax/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/basic-syntax/</link>
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/basic-syntax/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/basic-syntax/</guid>
       <description>基本语法#PL/SQL#是块结构语言，其最基本的单元是语句块。 每一条语句以逗号结尾，不区分大小写。 语句块#块的结构 关键字 是否必备 声明部分 DECLARE 可选 可执行命令部分 BEGIN、END 必备 异常处理部分 EXCEPTION 可选 -- 基本结构 DECLARE -- declarations section BEGIN -- executable command(s) EXCEPTION -- exception handling END; -- 示例 DECLARE message varchar2(20):= &amp;#39;Hello, World!&amp;#39;; BEGIN dbms_output.put_line(message); END; 标识符#由字母，数字，美元符号，下划线和数字符号组成 不能使用保留关键字作为标识符 不得超过30个字符 分隔符#分隔符 &#39; 字符串分隔符 &amp;quot; 引用标识符分隔符 , 项目分隔符 ( ) 表达式或列表分隔符 &amp;lt;&amp;lt; &amp;gt;&amp;gt; 标签分隔符 运算符 := 赋值运算符 =&amp;gt; 关联运算符 .</description>
     </item>
     
     <item>
       <title>数据类型</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/data-types/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/data-types/</link>
       <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/data-types/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/data-types/</guid>
       <description>数据类型#标量类型#数字型#精度：prec，所有数字位的个数 刻度：scale，小数点右边的数字位的个数，可以是负数 类型 描述 NUMBER(prec, scale) 整型或浮点型，最大精度 38 位。 PLS_INTEGER 带符号整型，以 32 位表示。 BINARY_INTEGER 带符号整型，以 32 位表示。 BINARY_FLOAT 单精度浮点型 BINARY_DOUBLE 双精度浮点型 1. NUMBER 等价子类型，用于兼容ANSI和IBM： 整型：DEC(prec, scale)、DECIMAL(prec, scale)、INT、INTEGER、SMALLINT 浮点型：NUMERIC(pre, secale)、DOUBLE PRECISION、FLOAT、REAL 2. NUMBER：以十进制进行存储，需转换为二进制后才能进行算术运算 PLS_INTEGER、BINARY_INTEGER：以二进制进行存储，可直接进行算术运算，比NUMBER更有效率 3. PLS_INTEGER：数值溢出时，抛出异常 BINARY_INTEGER：数值溢出时，会指派为 NUMBER 类型 字符型#类型 描述 CHAR 固定长度字符串，最大大小为32,767字节 VARCHAR2 可变长度字符串，最大大小为32,767字节 1. CHAR、VARCHAR2语法：CHAR[(maxSize [CHAR|BYTE])] CHAR|BYTE：以字符/字节为单位 maxSize:字符长度 2. STRING、VARCHAR：VARCHAR2的等价子类型，用于兼容ANSI和IBM 3. LONG、LONG RAW：仅为了保持向后兼容，可用BLOB代替 4. NCHAR、NVARCHAR2：CHAR、VARCHAR2的Unicode版本，用于多语言环境 5. ROWID：物理行标识符，用来标识普通数据表中的一行信息 UROWID：通用行标识符，可以存储物理、逻辑或外部行标识符 日期型#类型 描述 DATE 表示日期和时间，精度为秒级别，没有时区信息 TIMESTAMP 表示日期和时间，精度为纳秒级别， 可以选择包含时区信息 INTERVAL 表示时间段，可以选择以年，月，日，秒来表示时间区别 布尔型#BOOLEAN：TRUE、FALSE、NULL 注意：Oracle 数据库中并不包含布尔类型，故不能用布尔值与数据库交互 LOB类型#即大对象类型，存储大数据项，如文本，图形图像，视频剪辑和声音波形。 LOB数据类型允许对数据进行高效，随机，分段访问。 类型 描述 大小 BFILE 用于在数据库外的操作系统文件中存储大型二进制对象 取决于系统，但不得超过 4GB。 BLOB 用于在数据库中存储大型二进制对象 8TB 至 128TB CLOB 用于在数据库中存储大字符数据 8TB 至 128TB NCLOB 用于在数据库中存储大块 NCHAR 数据 8TB 至 128TB 引用类型#类型 描述 %TYPE 定义一个变量类型，其类型与数据表中某个列或某个变量的数据类型相同 %ROWTYPE 定义一个记录类型，其结构与数据表的数据结构相一致 --%TYPE 引用表单个字段类型 DECLARE v_name emp.</description>
     </item>
     
     <item>
       <title>控制语句</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/control-sentence/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/control-sentence/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/control-sentence/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/control-sentence/</guid>
       <description>控制语句#分支语句#IF-THEN#-- 语法 IF condition THEN statements; END IF; -- 示例 DECLARE a NUMBER(2) := 10; BEGIN IF a &amp;lt; 20 THEN DBMS_OUTPUT.put_line(&amp;#39;a is less than 20 &amp;#39; ); END IF; END; IF-THEN-ELSE#-- 语法 IF condition THEN statements1; ELSE statements2; END IF; -- 示例 DECLARE a NUMBER(3) := 100; BEGIN IF a &amp;lt; 20 THEN DBMS_OUTPUT.put_line(&amp;#39;a is less than 20 &amp;#39; ); ELSE DBMS_OUTPUT.</description>
     </item>
     
     <item>
       <title>异常处理</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/exception/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/exception/</link>
       <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/exception/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/exception/</guid>
       <description>异常处理#处理异常#-- 语法 DECLARE &amp;lt;declarations section&amp;gt; BEGIN &amp;lt;executable command(s)&amp;gt; EXCEPTION &amp;lt;exception handling goes here &amp;gt; WHEN exception1 THEN exception1-handling-statements WHEN exception2 THEN exception2-handling-statements WHEN exception3 THEN exception3-handling-statements ........ WHEN others THEN exception3-handling-statements END; -- 示例 DECLARE c_id customers.id%type := &amp;amp;cc_id; c_name customers.name%type; c_addr customers.address%type; -- 声明自定义异常 ex_invalid_id EXCEPTION; BEGIN IF c_id &amp;lt;= 0 THEN -- 触发自定义异常 RAISE ex_invalid_id; ELSE SELECT name, address INTO c_name, c_addr FROM customers WHERE id = c_id; DBMS_OUTPUT.</description>
     </item>
     
     <item>
       <title>事务处理</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/transaction/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/transaction/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/transaction/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/transaction/</guid>
       <description>事务处理#数据库事务#是数据库管理系统执行过程中的一个逻辑单位，由一个有限的数据库操作序列构成。 这些操作要么全部执行，要么全部不执行，是一个不可分割的工作单位。 ACID：原子性、一致性、隔离性、持久性 开启事务#连接到数据库后执行第一个SQL语句。 在事务完成后发出的每个新的SQL语句。 结束事务#发出 COMMIT 或 ROLLBACK 语句时 发出 DDL/ DCL 语句时 执行 DML 语句失败时 退出 Oracle 工具时 提交事务#INSERT INTO customers (id,name,age,address,salary) VALUES (1, &amp;#39;Ramesh&amp;#39;, 32, &amp;#39;Ahmedabad&amp;#39;, 2000.00 ); -- 提交事务 COMMIT; 回滚事务#INSERT INTO customers (id,name,age,address,salary) VALUES (7, &amp;#39;Rajnish&amp;#39;, 27, &amp;#39;HP&amp;#39;, 9500.00 ); INSERT INTO customers (id,name,age,address,salary) VALUES (8, &amp;#39;Riddhi&amp;#39;, 21, &amp;#39;WB&amp;#39;, 4500.00 ); -- 保存点 SAVEPOINT sav1; UPDATE customers SET salary = salary + 1000; -- 回滚到保存点 ROLLBACK TO sav1; UPDATE customers SET salary = salary + 1000 WHERE ID = 7; UPDATE customers SET salary = salary + 1000 WHERE ID = 8; COMMIT; 自动事务#-- 开启事务自动提交 SET AUTOCOMMIT ON; -- 关闭事务自动提交 SET AUTOCOMMIT OFF; </description>
     </item>
     
     <item>
       <title>面向对象</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/object-oriented/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/object-oriented/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/object-oriented/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/object-oriented/</guid>
       <description>面向对象#</description>
     </item>
     
     <item>
       <title>触发器</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/trigger/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/trigger/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/trigger/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/trigger/</guid>
       <description>触发器#触发器#是一种特殊类型的存储过程，通过触发数据库特定事件而自动运行。 创建触发器#-- 语法 CREATE [OR REPLACE ] TRIGGER trigger_name {BEFORE | AFTER | INSTEAD OF } -- 指定何时执行触发器。INSTEAD OF 子句用于视图 {INSERT [OR] | UPDATE [OR] | DELETE} -- 指定 DML 操作类型 [OF col_name] -- 指定将要更新的列 ON tbl_name -- 指定与触发器关联的表 [REFERENCING OLD AS o NEW AS n] -- 允许各种 DML 语句引用新值和旧值 [FOR EACH ROW] -- 行触发器：作用于每一行（否则仅执行一次，即表触发器） WHEN (condition) -- 为触发器触发的行提供一个条件。仅对行级触发器有效 DECLARE Declaration-statements BEGIN Executable-statements EXCEPTION Exception-handling-statements END; -- 示例 CREATE OR REPLACE TRIGGER display_salary_changes BEFORE DELETE OR INSERT OR UPDATE ON customers FOR EACH ROW WHEN (NEW.</description>
     </item>
     
     <item>
       <title>函数</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/function/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/function/</link>
       <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/function/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/function/</guid>
       <description>函数#自定义函数#创建函数#-- 语法 CREATE [OR REPLACE] FUNCTION function_name [(parameter_name [IN | OUT | IN OUT] type [, ...])] RETURN return_datatype {IS | AS} BEGIN &amp;lt; function_body &amp;gt; END [function_name]; -- 示例 CREATE OR REPLACE FUNCTION fun_max( p_num1 IN NUMBER, p_num2 IN NUMBER DEFAULT 99 ) RETURN NUMBER IS BEGIN IF p_num1&amp;gt;p_num2 THEN RETURN p_num1; ELSE RETURN p_num2; END IF; END; 调用函数#-- 方式1 SELECT fun_max(20) FROM DUAL; -- 方式2 BEGIN DBMS_OUTPUT.</description>
     </item>
     
     <item>
       <title>过程</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/procedure/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/procedure/</link>
       <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/procedure/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/procedure/</guid>
       <description>过程#过程 vs 函数#声明：函数必须包含一条 RETURN 子句，而存储过程没有 RETURN 子句 调用：函数可以在查询语句中直接调用，而存储过程必须单独调用 创建#-- 语法 CREATE [OR REPLACE] PROCEDURE procedure_name [(parameter_name [IN | OUT | IN OUT] type [, ...])] {IS | AS} BEGIN &amp;lt; procedure_body &amp;gt; END procedure_name; -- 示例 CREATE OR REPLACE PROCEDURE greetings AS BEGIN dbms_output.put_line(&amp;#39;Hello World!&amp;#39;); END; 执行#-- 方式1 EXEC greetings; EXECUTE greetings; -- 方式2 CALL greetings; -- 方式2 BEGIN greetings; END; 删除#DROP PROCEDURE greetings; 示例#DECLARE a NUMBER; b NUMBER; c NUMBER; PROCEDURE findMin(x IN NUMBER, y IN NUMBER, z OUT NUMBER) IS BEGIN IF x &amp;lt; y THEN z:= x; ELSE z:= y; END IF; END; BEGIN a:= 12; b:= 35; findMin(a, b, c); DBMS_OUTPUT.</description>
     </item>
     
     <item>
       <title>游标</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/cursor/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/cursor/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/cursor/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/cursor/</guid>
       <description>游标#简介#游标是一种处理数据的机制，提供了在结果集中查看和处理数据的能力 游标可以指定结果集中的任何位置，并允许用户对数据进行处理，类似集合中的迭代器 优缺点：消耗内存，提高 sql 执行效率 语法#不带参数 DECLARE CURSOR cur_stu_info -- 定义游标 IS SELECT * FROM stu_info; v_stu_info cur_stu_info%ROWTYPE; -- 定义变量，用于保存游标检索结果行 BEGIN OPEN cur_stu_info; -- 打开游标 LOOP -- 循环遍历 FETCH cur_stu_info INTO v_stu_info; -- 提取数据 DBMS_OUTPUT.put_line( -- 处理数据 v_stu_info.id || &amp;#39;:&amp;#39; || v_stu_info.name ); EXIT WHEN cur_stu_info%NOTFOUND; -- 游标检索完后退出循环 END LOOP; CLOSE cur_stu_info; -- 关闭游标 END; 带参数 DECLARE CURSOR cur_stu_info(v_id stu_info.id%type) IS SELECT * FROM stu_info t WHERE t.</description>
     </item>
     
     <item>
       <title>包</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/package/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/package/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/plsql/package/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/plsql/package/</guid>
       <description>包#PL/SQL 包#包是一种数据对象，是对相关类型、子程序、游标、异常、变量、常量的封装。 用于将逻辑相关的 PL/SQL 块或元素组织在一起，作为一个完整的单元存储在数据库中。 创建包规范#包规范：定义了可以从包外部引用的类型、变量、常量、异常、游标和子程序 ，即被公开的部分 CREATE PACKAGE cust_sal AS PROCEDURE find_sal(c_id customers.id%type); END cust_sal; 创建包体#包体：具有包规范中声明的各种方法代码和其他私有声明，这些声明对包之外的代码是隐藏的 CREATE OR REPLACE PACKAGE BODY cust_sal AS PROCEDURE find_sal(c_id customers.id%TYPE) IS c_sal customers.salary%TYPE; BEGIN SELECT salary INTO c_sal FROM customers WHERE id = c_id; DBMS_OUTPUT.put_line(&amp;#39;Salary: &amp;#39;|| c_sal); END find_sal; END cust_sal; 调用包#-- 语法 package_name.element_name; -- 示例：调用cust_sal包中的find_sal方法 DECLARE code customers.id%type := &amp;amp;cc_id; BEGIN cust_sal.</description>
     </item>
     

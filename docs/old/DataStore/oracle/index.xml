@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oracle on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/DataStore/oracle/</link>
+    <link>https://jetdaline.github.io/docs/old/DataStore/oracle/</link>
     <description>Recent content in Oracle on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/DataStore/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/DataStore/oracle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>系统函数</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/system-function/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/system-function/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/system-function/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/system-function/</guid>
       <description>系统函数#转换函数#函数 说明 示例 TO_CHAR 日期 ==&amp;gt; 字符串数值 ==&amp;gt; 字符串 TO_CHAR(SYSDATE, &amp;lsquo;YYYY-MM-DD HH24:MI:SS&amp;rsquo;)TO_CHAR(123.45678, &amp;lsquo;$9999,999&amp;rsquo;) TO_DATE 字符串 ==&amp;gt; 日期 TO_DATE(&amp;lsquo;2000/01/01&amp;rsquo;, &amp;lsquo;YYYY/MM/DD&amp;rsquo;) TO_NUMBER 字符串 ==&amp;gt; 数值 TO_NUMBER(&amp;rsquo;-$12,345.67&amp;rsquo;, &amp;lsquo;$99,999.99&amp;rsquo;) 字符函数#函数 说明 LOWER(x) 全部转换为小写 UPPER(x) 全部转换为大写 INITCAP(x) 首字母转换为大写 CONCAT(x, y) 连接字符串 x 和 y ，可以用 || 代替 LENGTH(x) 返回字符串的长度 SUBSTR(x, start[, len]) 截取子字符串，从 start 处开始，截取 len 个字符，缺省 len 截到结尾 INSTR(x, str [, start] [, n) 在 x 中查找 str ，可指定从 start 开始、从第 n 次开始 LPAD(x, n, str) 使用 str 进行左填充，直到长度到达 n RPAD(x, n, str) 使用 str 进行右填充，直到长度到达 n TRIM([str FROM] x) 去除 x 两边的 str ，缺省去除空格 LTRIM(x [, str]) 去除 x 左边的 str ，缺省去除空格 RTRIM(x [, str]) 去除 x 右边的 str ，缺省去除空格 REPLACE(x, old, new) 在 x 中查找 old ，并替换为 new 数值函数#函数 说明 示例 CEIL(x) 向上取整 CEIL(5.</description>
     </item>
     
     <item>
       <title>系统表</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/oracle/system-table/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/oracle/system-table/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/oracle/system-table/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/oracle/system-table/</guid>
       <description>系统表#系统表前缀#前缀 说明 USER_ 记录用户对象的信息 ALL_ 记录用户对象的信息及被授权访问的对象信息 DBA_ 记录数据库实例的所有对象的信息 V$ 当前实例的动态视图 常用查询#-- 常用表#dba_ all_ user_ 对象 dba_objects all_objects user_objects 视图 dba_views all_views user_views 表 dba_tables all_tables user_tables 列 dba_tab_columns all_tab_columns user_tab_columns 序列 dba_sequences all_sequences user_sequences 同义词 dba_synonyms all_synonyms user_synonyms 索引 dba_indexs all_indexs user_indexs 列索引 dba_ind_columns all_ind_columns user_ind_columns 约束 dba_constraints all_constraints user_constrainst 列约束 dba_cons_columns all_cons_columns user_cons_columns dual -- 伪表 dba_users -- 用户 dba_roles -- 角色 dba_tablespaces -- 表空间 dba_data_files -- 数据文件 dba_trigers -- 触发器 user_source -- 对象资源 user_procedures -- 存储过程 附录：dba_#dba_users 数据库用户信息 dba_segments 表段信息 dba_extents 数据区信息 dba_objects 数据库对象信息 dba_tablespaces 数据库表空间信息 dba_data_files 数据文件设置信息 dba_temp_files 临时数据文件信息 dba_rollback_segs 回滚段信息 dba_ts_quotas 用户表空间配额信息 dba_free_space 数据库空闲空间信息 dba_profiles 数据库用户资源限制信息 dba_sys_privs 用户的系统权限信息 dba_tab_privs 用户具有的对象权限信息 dba_col_privs 用户具有的列对象权限信息 dba_role_privs 用户具有的角色信息 dba_audit_trail 审计跟踪记录信息 dba_stmt_audit_opts 审计设置信息 dba_audit_object 对象审计结果信息 dba_audit_session 会话审计结果信息 dba_indexes 用户模式的索引信息 附录：all_#all_users 数据库所有用户的信息 all_objects 数据库所有的对象的信息 all_def_audit_opts 所有默认的审计设置信息 all_tables 所有的表对象信息 all_indexes 所有的数据库对象索引的信息 附录：user_#user_objects 用户对象信息 user_source 用户的所有资源对象信息 user_segments 用户的表段信息 user_tables 用户的表对象信息 user_tab_columns 用户的表列信息 user_constraints 用户的对象约束信息 user_sys_privs 当前用户的系统权限信息 user_tab_privs 当前用户的对象权限信息 user_col_privs 当前用户的表列权限信息 user_role_privs 当前用户的角色权限信息 user_indexes 用户的索引信息 user_ind_columns 用户的索引对应的表列信息 user_cons_columns 用户的约束对应的表列信息 user_clusters 用户的所有簇信息 user_clu_columns 用户的簇所包含的内容信息 user_cluster_hash_expressions 散列簇的信息 user_jobs 用户定时任务信息表 附录：v$#v$database 数据库信息 v$datafile 数据文件信息 v$controlfile 控制文件信息 v$logfile 重做日志信息 v$instance 数据库实例信息 v$log 日志组信息 v$loghist 日志历史信息 v$sga 数据库SGA信息 v$parameter 初始化参数信息 v$process 数据库服务器进程信息 v$bgprocess 数据库后台进程信息 v$controlfile_record_section 控制文件记载的各部分信息 v$thread 线程信息 v$datafile_header 数据文件头所记载的信息 v$archived_log 归档日志信息 v$archive_dest 归档日志的设置信息 v$logmnr_contents 归档日志分析的DML DDL结果信息 v$logmnr_dictionary 日志分析的字典文件信息 v$logmnr_logs 日志分析的日志列表信息 v$tablespace 表空间信息 v$tempfile 临时文件信息 v$filestat 数据文件的I/O统计信息 v$undostat Undo 数据信息 v$rollname 在线回滚段信息 v$session 会话信息 v$transaction 事务信息 v$rollstat 回滚段统计信息 v$pwfile_users 特权用户信息 v$sqlarea 当前查询过的sql语句访问过的资源及相关的信息 v$sql 与v$sqlarea基本相同的相关信息 v$sysstat 数据库系统状态信息 附录：其他#session_roles 会话的角色信息 session_privs 会话的权限信息 index_stats 索引的设置和存储信息 </description>
     </item>
     

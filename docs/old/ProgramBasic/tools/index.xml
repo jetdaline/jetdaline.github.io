@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开发工具 on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/</link>
+    <link>https://jetdaline.github.io/docs/old/ProgramBasic/tools/</link>
     <description>Recent content in 开发工具 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/ProgramBasic/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/ProgramBasic/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown</title>
-      <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/markdown/</link>
+      <link>https://jetdaline.github.io/docs/old/ProgramBasic/tools/markdown/</link>
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/ProgramBasic/tools/markdown/</guid>
+      <guid>https://jetdaline.github.io/docs/old/ProgramBasic/tools/markdown/</guid>
       <description>Markdown#概述#是一种可以使用普通文本编辑器编写的 标记语言 通过简单的标记语法，它可以使普通文本内容具有一定的格式 标题#语法 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 文字#语法
 *斜体* **粗体** ***斜体粗体*** ~~删除线~~ 效果
 斜体 粗体 斜体粗体 删除线

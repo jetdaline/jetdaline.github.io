@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开源框架 on IWiki</title>
-    <link>https://ardadata.github.io/docs/frameworks/</link>
+    <link>https://jetdaline.github.io/docs/frameworks/</link>
     <description>Recent content in 开源框架 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://ardadata.github.io/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://jetdaline.github.io/docs/frameworks/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

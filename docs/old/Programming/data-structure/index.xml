@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据结构 on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/Programming/data-structure/</link>
+    <link>https://jetdaline.github.io/docs/old/Programming/data-structure/</link>
     <description>Recent content in 数据结构 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Programming/data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/Programming/data-structure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数组</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/array/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/array/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/array/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/array/</guid>
       <description>数组#数组#Array 是一种线性结构，在物理内存中占据着一块连续空间。 数组为每个存储的元素都分配了一个下标（索引） ，下标从0开始且自增连续 特点#查询速度快
 新增、删除速度慢
 查询元素#根据索引直接定位 新增元素#根据索引找到位置 把后面的所有元素往后移动 插入元素 删除元素#根据索引找到位置 删除元素 再把后面的所有元素往前移动 </description>
@@ -20,64 +20,64 @@
     
     <item>
       <title>链表</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/linked-list/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/linked-list/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/linked-list/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/linked-list/</guid>
       <description>链表#链表#Linked List 是一种物理存储单元上非连续、非顺序的存储结构 数据元素的逻辑顺序，是通过链表中的指针链接次序实现的 每个数据元素包含两个部分：存储元素的数据域、指向下一个结点地址的指针域 特点#查询速度慢 新增、删除速度快 查询元素#因为数据都是分散存储的，所以只能从第一个数据开始，顺着指针的指向逐一往下查找 新增元素#顺着指针，查找到位置 新增一个元素 删除元素#顺着指针，查找到位置 删除一个元素 </description>
     </item>
     
     <item>
       <title>栈</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/stack/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/stack/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/stack/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/stack/</guid>
       <description>栈#栈#Stack 是一种特殊的线性表 限制仅允许在线性表的一端，进行插入和删除操作 特点#后进先出（Last In First Out，简称LIFO） 入栈出栈#</description>
     </item>
     
     <item>
       <title>队列</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/queue/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/queue/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/queue/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/queue/</guid>
       <description>队列#队列#Queue 是一种特殊的线性表 限制仅允许在线性表的一端进行插入，在另一端进行删除 特点#先进先出（First In First Out，简称FIFO） 入队出队#</description>
     </item>
     
     <item>
       <title>散列表</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/hash/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/hash/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/hash/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/hash/</guid>
       <description>散列表#散列表#Hash 也叫哈希表，是一种根据键值对 (key和value) 直接进行访问的数据结构 数据存储#使用哈希函数计算 key 的哈希值 再用哈希值对数组长度取模，得到其余数，即存放位置的数组下标 如果该位置已经存储了元素，则使用链表在已有元素的后面进行存储 数据查询#使用哈希函数计算 key 的哈希值， 再用哈希值对数组长度取模，得到存放位置的数组下标 对比参数key与节点key是否相同，如果相同则取出节点value 如果不相同，则对指向的链表进行线性查找 哈希冲突#两个不同的输入值，根据哈希函数计算出的哈希值取模结果相同的现象 </description>
     </item>
     
     <item>
       <title>树</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/tree/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/tree/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/tree/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/tree/</guid>
       <description>树#树#Tree 是由结点和边组成的，不存在环的一种数据结构 是一种非线性存储结构，存储的是具有“一对多”关系的数据元素的集合 特点#每个结点有零个或多个子结点 没有父结点的结点称为根结点 每一个非根结点有且只有一个父结点 除了根结点外，每个子结点可以分为多个不相交的子树 术语#度：结点的子树数目，如图：结点B的度为2 树的度：树中结点的最大度数，如图：树的度为3 树的深度：树中结点的最大层数，如图：树的深度为4 相互关系：祖先、后代、父子、兄弟 分支结点：度大于零的结点 叶子结点：度等于零的结点 分类#二叉树：一个结点最多只有两个子结点 满二叉树：除了最后一层，其它层的结点都有两个子结点 完全二叉树：除了最后一层，其他层的结点个数都要达到最大，且最后一层的结点从左到右排列 平衡二叉树：任意结点都满足：左右子树的高度差不大于1 二叉搜索树：任意结点都满足：左子结点 &amp;lt; 父结点 &amp;lt; 右子结点 树的遍历#前序遍历：根结点 ==&amp;gt; 左子树 ==&amp;gt; 右子树 中序遍历：左子树 ==&amp;gt; 根结点 ==&amp;gt; 右子树 后序遍历：左子树 ==&amp;gt; 右子树 ==&amp;gt; 根结点 </description>
     </item>
     
     <item>
       <title>堆</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/heap/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/heap/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/heap/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/heap/</guid>
       <description>堆#堆#Heap 堆是一颗用数组实现的完全二叉树 堆中某个结点的值总是不大于或不小于其父结点的值 </description>
     </item>
     
     <item>
       <title>图</title>
-      <link>https://ardadata.github.io/docs/old/Programming/data-structure/graph/</link>
+      <link>https://jetdaline.github.io/docs/old/Programming/data-structure/graph/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Programming/data-structure/graph/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Programming/data-structure/graph/</guid>
       <description>图#图#Graph 是一系列结点的集合，这些顶点通过边进行连接 这些结点称为顶点，边是顶点的有序偶对 分类#有向图：边不仅连接两个顶点，并且具有方向 无向图：边仅仅连接两个顶点，没有其他含义 </description>
     </item>
     

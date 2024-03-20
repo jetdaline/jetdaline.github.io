@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>持久化 on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/DataStore/redis/persistence/</link>
+    <link>https://jetdaline.github.io/docs/old/DataStore/redis/persistence/</link>
     <description>Recent content in 持久化 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/DataStore/redis/persistence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/DataStore/redis/persistence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RDB</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/redis/persistence/RDB/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/redis/persistence/RDB/</link>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/redis/persistence/RDB/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/redis/persistence/RDB/</guid>
       <description>RDB#RDB#Redis DataBase，在指定的时间间隔内将内存中的数据集快照写入磁盘。 持久化文件：dump.rdb 过程#Redis 调用 fork() ，创建一个子进程。 主进程继续处理client请求，且不进行任何IO操作，以保证性能。 子进程会先将数据写入到一个临时文件中，待持久化过程都结束了， 再用这个临时文件替换上次持久化好的文件。 触发#自动触发
 根据 save m n 配置规则自动触发； 从节点全量复制时，主节点发送rdb文件给从节点完成复制操作，主节点会触发 bgsave； 执行 debug reload 时； 执行 shutdown时，如果没有开启aof，也会触发。 手动触发
 save：会阻塞当前Redis服务器，直到持久化完成，线上应该禁止使用。 bgsave：该触发方式会fork一个子进程，由子进程负责持久化过程，因此阻塞只会发生在fork子进程的时候。 优点#只有一个文件 dump.rdb，方便持久化。 容灾性好，一个文件可以保存到安全的磁盘。 性能最大化，保证了 redis的高性能 相对于数据集大时，比 AOF 的启动效率更高。 缺点#数据安全性低。如果Redis意外down掉的话，就会丢失最后一次快照后的所有修改 每次保存 RDB 的时候，Redis 都要 fork() 出一个子进程。这可能会非常耗时，造成服务器暂时停止处理客户端。 </description>
@@ -20,10 +20,10 @@ save：会阻塞当前Redis服务器，直到持久化完成，线上应该禁�
     
     <item>
       <title>AOF</title>
-      <link>https://ardadata.github.io/docs/old/DataStore/redis/persistence/AOF/</link>
+      <link>https://jetdaline.github.io/docs/old/DataStore/redis/persistence/AOF/</link>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/DataStore/redis/persistence/AOF/</guid>
+      <guid>https://jetdaline.github.io/docs/old/DataStore/redis/persistence/AOF/</guid>
       <description>AOF#AOF#Append Only File，以日志的形式来记录每个写操作，并追加到文件中。 当Redis重启时，会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容。 持久化文件：appendonly.aof 过程#Redis 调用 fork() ，创建一个子进程。 主进程处理client请求，把写命令写入到aof文件中，并把写命令缓存起来。 子进程往临时文件中写入重建数据库状态的命令，之后通知主进程。 主进程把缓存的写命令也写入到临时文件，然后用临时文件替换老aof文件。 触发#自动触发：根据配置规则自动触发； 手动触发：bgrewriteaof 优点#数据安全 解决了数据一致性问题 AOF 机制的 rewrite 模式 缺点#AOF 文件比 RDB 文件大，且恢复速度慢。 数据集大的时候，比 rdb 启动效率低。 </description>
     </item>
     

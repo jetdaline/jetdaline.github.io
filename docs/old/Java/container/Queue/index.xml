@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Queue on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/Java/container/Queue/</link>
+    <link>https://jetdaline.github.io/docs/old/Java/container/Queue/</link>
     <description>Recent content in Queue on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Java/container/Queue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/Java/container/Queue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BlockingQueue</title>
-      <link>https://ardadata.github.io/docs/old/Java/container/Queue/BlockingQueue/</link>
+      <link>https://jetdaline.github.io/docs/old/Java/container/Queue/BlockingQueue/</link>
       <pubDate>Wed, 16 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Java/container/Queue/BlockingQueue/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Java/container/Queue/BlockingQueue/</guid>
       <description>BlockingQueue#阻塞队列#队列，Queue，是一种先进先出（first in first out：FIFO）的抽象的数据结构 BlockingQueue，是一个支持两个附加操作的队列 当阻塞队列是空时，从队列中获取元素的操作将会被阻塞 当阻塞队列是满时，往队列中添加元素的操作将会被阻塞 核心方法#抛出异常 返回特殊值 超时退出 一直阻塞 插入 add(e) offer(e) offer(e,time,unit) put(e) 移除 remove() poll() poll(time,unit) take() 检查 element() peek() / / 说明 抛出异常 当阻塞队列满时，再往队列 add 元素会抛 IllegalStateException:Queuefull当阻塞队列空时，再往队列 Remove 元素时候会抛出 NoSuchElementException 返回特殊值 插入方法，成功返回 true，失败返回 false移除方法，成功返回元素，队列里面没有就返回null 超时退出 当阻塞队列满时，队列会阻塞生产者线程一定时间，超过时限后生产者线程就会退出当阻塞队列空时，队列会阻塞消费者线程一定时间，超过时限后消费者线程就会退出 一直阻塞 当阻塞队列满时，生产者继续往队列里面 put 元素，队列会一直阻塞直到 put 数据 or 响应中断退出当阻塞队列空时，消费者试图从队列 take 元素，队列会一直阻塞消费者线程，直到队列可用 常用队列#队列 说明 实现 ArrayBlockingQueue 有界阻塞队列 由数组实现 LinkedBlockingQueue 有界阻塞队列 由链表实现 LinkedTransferQueue 无界阻塞队列 由链表实现 LinkedBlockingDeque 双端有界阻塞队列 由链表实现 DelayQueue 延迟无界阻塞队列 SynchronousQueue 单元素的阻塞队列 PriorityBlockingQueue 支持优先级的无界阻塞队列 应用#线程池、消息中间件、生产者消费者模式 // 生产者消费者模式-传统版 public class ShareData { private int num = 0; private Lock lock = new ReentrantLock(); private Condition condition = lock.</description>
     </item>
     

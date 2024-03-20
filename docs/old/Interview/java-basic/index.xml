@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java 基础 on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/Interview/java-basic/</link>
+    <link>https://jetdaline.github.io/docs/old/Interview/java-basic/</link>
     <description>Recent content in Java 基础 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Interview/java-basic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/Interview/java-basic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java概述</title>
-      <link>https://ardadata.github.io/docs/old/Interview/java-basic/summary/</link>
+      <link>https://jetdaline.github.io/docs/old/Interview/java-basic/summary/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Interview/java-basic/summary/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Interview/java-basic/summary/</guid>
       <description>JVM、JRE、JDK的区别？#1、JVM Java Virtual Machine Java虚拟机 2、JRE Java Runtime Environment Java运行环境，包括Java虚拟机和Java程序所需的核心类库等 3、JDK Java Development Kit Java开发工具包，是提供给Java开发人员使用的，其中包含了Java的开发工具，也包括了JRE 什么是跨平台性？原理是什么？#跨平台性：是指java语言编写的程序，一次编译后，可以在多个系统平台上运行。 实现原理：Java程序是通过java虚拟机在系统平台上运行的，只要该系统可以安装相应的java虚拟机， 该系统就可以运行java程序。 什么是字节码？采用字节码的大好处是什么？#字节码：Java源代码经过虚拟机编译器编译后产生的文件（即扩展为.class的文件），它只面向虚拟机。 采用字节码的好处：Java语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解 释型语言可移植的特点。 什么是Java程序的主类？应用程序和小程序的主类有何不同？#一个程序中可以有多个类，但只能有一个类是主类。主类是Java程序执行的入口点。 在Java应用程序中，这个主类是指包含main()方法的类，但不一定要求是public类。 在Java小程序中，这个主类是一个继承自系统类JApplet或Applet的子类，但要求必须是public类。 Java和C++的区别？#1、都是面向对象的语言，都支持封装、继承和多态 2、Java不提供指针来直接访问内存，程序内存更加安全 3、Java的类是单继承的，C++支持多重继承；虽然Java的类不可以多继承，但是 接口可以多继承。 4、Java有自动内存管理机制，不需要程序员手动释放无用内存 </description>
     </item>
     
     <item>
       <title>基础语法</title>
-      <link>https://ardadata.github.io/docs/old/Interview/java-basic/basic-grammar/</link>
+      <link>https://jetdaline.github.io/docs/old/Interview/java-basic/basic-grammar/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Interview/java-basic/basic-grammar/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Interview/java-basic/basic-grammar/</guid>
       <description>Java有哪些数据类型？#1、基本数据类型 字符型：char 布尔型：boolean 数值型： 整数类型：byte, short, int, long 浮点类型：float, double 2、引用数据类型 类： class 接口： interface 数组： [] switch能作用于的类型？#switch可以作用于 byte、short、char、int 类型 从Java5开始，可以作用于 enum 类型 从Java7开始，可以作用于 String 类型 用最有效率的方法计算 2 乘以 8 ？#// 左移 3 位相当于乘以 2 的 3 次方，右移 3 位相当于除以 2 的 3 次 方 2 &amp;lt;&amp;lt; 3 Math.round(11.5) 等于多少？Math.round(-11.5) 等于多少？#Math.round(11.5) = 12 Math.round(-11.5) = -11 四舍 五入的原理是在参数上加 0.5 然后进行下取整。 loat f=3.</description>
     </item>
     
     <item>
       <title>集合容器</title>
-      <link>https://ardadata.github.io/docs/old/Interview/java-basic/container/</link>
+      <link>https://jetdaline.github.io/docs/old/Interview/java-basic/container/</link>
       <pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Interview/java-basic/container/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Interview/java-basic/container/</guid>
       <description>HashMap 实现原理#1、底层使用哈希表#数组结构：存储区间连续、内存占用严重、空间复杂度大，寻址容易，插入和删除困难 链表结构：存储区间离散、内存占用宽松、空间复杂度小，寻址困难，插入和删除容易 哈希表结构：数组与链表的结合体，是一种寻址容易，插入删除也容易的数据结构。 每个节点包含四个属性：key、value、hash 和 next引用 JDK1.7：数组 + 链表 JDK1.8：数组 + 链表 + 红黑树 2、新增：put()#调用 hash()，计算 key 的 hash 值
 再通过哈希算法，将 hash 值转换成数组的下标
 如果下标位置为空，则新增一个节点

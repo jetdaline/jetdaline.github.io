@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zookeeper on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/</link>
+    <link>https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/</link>
     <description>Recent content in Zookeeper on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工作原理</title>
-      <link>https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/work-principle/</link>
+      <link>https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/work-principle/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/work-principle/</guid>
+      <guid>https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/work-principle/</guid>
       <description>工作原理#工作机制#基于观察者模式设计，接受观察者的注册 负责存储和管理大家都关心的数据 当这些数据发现变化时，将会通知到已注册的观察者。 监听原理#在 main() 主线程中创建 zkClient 客户端。 zkClient 会创建两个线程，一个负责网络连接通信（connet），一个负责监听（listener）。 zkClient 通过 connet 线程，将监听事件注册到 Zookeeper 的监听列表。 当数据或路径发生改变时，Zookeeper 会将消息发送给 listener 线程。 listener 线程调用 process() 方法，执行相应的操作。 </description>
     </item>
     
     <item>
       <title>选举机制</title>
-      <link>https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/elect-leader/</link>
+      <link>https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/elect-leader/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/FrameworkTools/microservice/zookeeper/elect-leader/</guid>
+      <guid>https://jetdaline.github.io/docs/old/FrameworkTools/microservice/zookeeper/elect-leader/</guid>
       <description>选举机制#选举#在 Zookeeper工作时，有一个节点为 Leader，其他则为 Follower，而 Leader 是通过内部的选举机制临时产生的 节点状态：领导者（LEADING）、竞选者（LOOKING）、跟随者（FOLLOWING）、观察者（OBSERVER） 触发选举时机：集群首次启动、集群在工作时Leader宕机 投票信息：myid（服务器id）、ZXID （事务id）、逻辑时钟、节点状态 选举原则#Zookeeper 集群中只有超过半数以上的服务器启动，集群才能正常工作；
 在集群正常工作之前，myid 小的服务器给 myid 大的服务器投票，直到集群正常工作，选出 Leader；
 选出Leader之后，之前的服务器状态由 Looking 改变为 Following，以后的服务器都是 Follower。

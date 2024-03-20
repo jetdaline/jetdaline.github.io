@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>垃圾回收 on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/Java/jvm/gc/</link>
+    <link>https://jetdaline.github.io/docs/old/Java/jvm/gc/</link>
     <description>Recent content in 垃圾回收 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/Java/jvm/gc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/Java/jvm/gc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>引用类型</title>
-      <link>https://ardadata.github.io/docs/old/Java/jvm/gc/reference-type/</link>
+      <link>https://jetdaline.github.io/docs/old/Java/jvm/gc/reference-type/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Java/jvm/gc/reference-type/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Java/jvm/gc/reference-type/</guid>
       <description>引用类型#强引用#指普通的对象引用 // 对于具有强引用的对象，就算出现OOM，垃圾回收器也不会对该对象进行回收。 Object strongReference = new Object(); // 只有当强引用和对象之间的关联被中断时，对象才会被回收 strongReference = null; 软引用#对于只有软引用的对象，当内存空间不充足时，它会被回收；当空间充足时，它不会被回收； 应用场景：高速缓存、读取大量本地图片 // 强引用 String str = new String(&amp;#34;abc&amp;#34;); // 软引用 SoftReference&amp;lt;String&amp;gt; softReference = new SoftReference&amp;lt;&amp;gt;(str); System.out.println(softReference.get()); 弱引用#对于只有弱引用的对象，不管内存空间是否充足，它都会被回收 应用场景：读取大量本地图片 // 强引用 String str = new String(&amp;#34;abc&amp;#34;); // 弱引用 WeakReference&amp;lt;String&amp;gt; weakReference = new WeakReference&amp;lt;&amp;gt;(str); System.out.println(weakReference.get()); // WeakHashMap：键是&amp;#34;弱键&amp;#34;，通过弱引用来管理 entry Map&amp;lt;Integer, String&amp;gt; weakMap = new WeakHashMap&amp;lt;&amp;gt;(); Integer key = new Integer(1); weakMap.</description>
     </item>
     
     <item>
       <title>判定算法</title>
-      <link>https://ardadata.github.io/docs/old/Java/jvm/gc/judge/</link>
+      <link>https://jetdaline.github.io/docs/old/Java/jvm/gc/judge/</link>
       <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Java/jvm/gc/judge/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Java/jvm/gc/judge/</guid>
       <description>判定算法#引用计数法#原理：通过计算引用的数量，来判断一个对象是否可以回收 缺陷：不能解决对象间循环引用的问题 实现： 给对象添加一个引用计数器，记录引用该对象的次数 当有地方引用该对象时，计数器加 1。当引用失效时，计数器减 1。 当计数器值为 0 时，代表为垃圾对象，就会被 GC 进行回收。 可达性分析法#原理：通过判断对象是否可到达，来决定对象是否可以被回收
 实现：
 通过一系列的名为GC Roots的对象作为起始点。 从这些节点开始向下搜索，搜索所走过的路径称为引用链。 当从 GC Roots 到一个对象不可达时，则证明此对象是不可用的。 可以作为 GC Roots 的对象
@@ -30,10 +30,10 @@ Java 虚拟机栈中正在引用的对象 本地方法栈中正在引用的对�
     
     <item>
       <title>回收算法</title>
-      <link>https://ardadata.github.io/docs/old/Java/jvm/gc/collect/</link>
+      <link>https://jetdaline.github.io/docs/old/Java/jvm/gc/collect/</link>
       <pubDate>Sat, 02 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Java/jvm/gc/collect/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Java/jvm/gc/collect/</guid>
       <description>回收算法#标记 - 清除（Mark-Sweep）#原理：
 标记：扫描内存空间，对存活的对象进行标记 清除：扫描内存空间，回收未标记的对象。 缺点：
 两次扫描，效率低 会产生内存碎片 标记 - 整理（Mark-Compact）#原理：
@@ -45,10 +45,10 @@ Java 虚拟机栈中正在引用的对象 本地方法栈中正在引用的对�
     
     <item>
       <title>垃圾收集器</title>
-      <link>https://ardadata.github.io/docs/old/Java/jvm/gc/collector/</link>
+      <link>https://jetdaline.github.io/docs/old/Java/jvm/gc/collector/</link>
       <pubDate>Sat, 02 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/Java/jvm/gc/collector/</guid>
+      <guid>https://jetdaline.github.io/docs/old/Java/jvm/gc/collector/</guid>
       <description>垃圾收集器#回收方式#串行（Serial）、并行（Parallel）、并发（Concurrent）、STW 七大收集器#收集器：Serial 、Serial Old#单个垃圾收集线程串行工作，会暂停所有用户线程，不适合服务器环境 Serial：新生代，复制算法 Serial Old：老年代，标记 - 整理算法 收集器：ParNew#Serial 收集器的多线程（即并行）版本 ParNew：新生代，复制算法 收集器：Parallel Scavenge / Old#多个垃圾收集线程并行工作，会暂停所有用户线程，适合科学算/大数据处理等弱交互场景 Parallel Scavenge：新生代，复制算法，可控制吞吐量 Parallel Old：老年代，标记 - 整理算法 收集器：CMS#概述#用户线程和垃圾收集线程并发执行，互联网公司多用它，适用对响应时间有要求的场景 Concurrent Mark Sweep：老年代，标记 - 清除算法 优缺点#并发收集低停顿，但对CPU资源压力大，且会产生大量碎片 步骤#初始标记（CMS initial mark） 并发标记（CMS concurrent mark） 重新标记（CMS remark） 并发清除（CMS concurrent sweep） 收集器：G1#概述#将堆内存分割成不同的区域然后并发的对其进行垃圾回收 面向服务端应用，适用于多处理器和大容量内存环境 G1：整体上采用标记-整理算法，局部是采用复制算法 步骤#初始标记（Initial Marking） 并发标记（Concurrent Marking） 最终标记（Final Marking） 筛选回收（Live Data Counting and Evacuation） 原理#Garbage First</description>
     </item>
     

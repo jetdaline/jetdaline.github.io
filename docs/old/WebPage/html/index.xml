@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTML on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/WebPage/html/</link>
+    <link>https://jetdaline.github.io/docs/old/WebPage/html/</link>
     <description>Recent content in HTML on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/WebPage/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/WebPage/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>文档标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/document/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/document/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/document/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/document/</guid>
       <description>文档标签#标签 说明 &amp;lt;!DOCTYPE&amp;gt; 定义文档类型 &amp;lt;html&amp;gt; 定义 HTML 文档 &amp;lt;head&amp;gt; 定义网页的头部 &amp;lt;body&amp;gt; 定义网页的主体 头部标签#标签 说明 &amp;lt;title&amp;gt; 定义网页的标题 &amp;lt;meta&amp;gt; 定义网页的元数据 &amp;lt;base&amp;gt; 定义页面链接标签的默认链接地址 &amp;lt;link&amp;gt; 定义外部资源 &amp;lt;script&amp;gt; 定义脚本文件 &amp;lt;style&amp;gt; 定义样式文件 </description>
     </item>
     
     <item>
       <title>文本标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/text/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/text/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/text/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/text/</guid>
       <description>文本标签#标签 说明 &amp;lt;b&amp;gt; 定义粗体文本（无语义） &amp;lt;i&amp;gt; 定义斜体文本（无语义） &amp;lt;u&amp;gt; 定义下划线文本（无语义） &amp;lt;s&amp;gt; 定义删除线文本（无语义） &amp;lt;del&amp;gt; 定义被删除文本（有语义） &amp;lt;ins&amp;gt; 定义被插入文本（有语义） &amp;lt;em&amp;gt; 定义强调文本（有语义） &amp;lt;strong&amp;gt; 定义强调文本（有语义，语气更为强烈） &amp;lt;sup&amp;gt; 定义上标文本 &amp;lt;sub&amp;gt; 定义下标文本 &amp;lt;big&amp;gt; 定义大号字 &amp;lt;small&amp;gt; 定义小号字 &amp;lt;code&amp;gt; 定义计算机代码 &amp;lt;pre&amp;gt; 定义预格式文本 排版标签#标签 说明 &amp;lt;h1&amp;gt;&amp;hellip;&amp;hellip;&amp;lt;h6&amp;gt; 定义 HTML 标题 &amp;lt;p&amp;gt; 定义一个段落 &amp;lt;br&amp;gt; 定义换行 &amp;lt;hr&amp;gt; 定义水平线 &amp;lt;div&amp;gt; 定义文档中的块 &amp;lt;span&amp;gt; 定义文档中的块 </description>
     </item>
     
     <item>
       <title>列表标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/list/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/list/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/list/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/list/</guid>
       <description>列表标签#标签 说明 &amp;lt;ul&amp;gt; 定义一个无序列表（属性type：disc、square、circle） &amp;lt;ol&amp;gt; 定义一个有序列表（属性type：1、a、A、ⅰ、Ⅰ） &amp;lt;li&amp;gt; 定义一个列表项 &amp;lt;dl&amp;gt; 定义一个定义列表 &amp;lt;dt&amp;gt; 定义一个定义列表项 &amp;lt;dd&amp;gt; 定义一个定义列表项描述 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;Coffee&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Milk&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt;Coffee&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Milk&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;Coffee&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;Black hot drink&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;Milk&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;White cold drink&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt; </description>
     </item>
     
     <item>
       <title>链接标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/link/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/link/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/link/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/link/</guid>
       <description>URL#.代表当前网页所在目录，可省略 ..代表当前网页所在目录的上一级目录 //绝对路径 &amp;lt;img src=&amp;#34;D:/html/img.png&amp;#34; /&amp;gt; //相对路径 &amp;lt;img src=&amp;#34;../img.png&amp;#34; /&amp;gt; &amp;lt;a&amp;gt;#定义一个链接 属性： title：链接提示文字 href：链接地址 target：在何处打开链接：_blank、_parent、_self、_top //链接到资源 &amp;lt;a href=&amp;#34;https://www.baidu.com/&amp;#34; /&amp;gt; &amp;lt;a href=&amp;#34;../xxx.html&amp;#34; /&amp;gt; &amp;lt;a href=&amp;#34;../xxx.rar&amp;#34; /&amp;gt; //链接到邮件 &amp;lt;a href=&amp;#34;mailto:xxx@qq.com&amp;#34; /&amp;gt; //定义锚点 &amp;lt;a name=&amp;#34;mark&amp;#34; /&amp;gt; //链接到锚点 &amp;lt;a href=&amp;#34;#mark&amp;#34; /&amp;gt; &amp;lt;a href=&amp;#34;../xxx.html#&amp;gt;mark&amp;#34; /&amp;gt; &amp;lt;img&amp;gt;#定义一个图像 属性： src：定义图像的URL alt：定义图像的替代文本 width：定义图像的宽 height：定义图像的高 &amp;lt;img src=&amp;#34;xxx.png&amp;#34; alt=&amp;#34;xxx&amp;#34; width=&amp;#34;40&amp;#34; height=&amp;#34;40&amp;#34; /&amp;gt; </description>
     </item>
     
     <item>
       <title>表格标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/table/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/table/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/table/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/table/</guid>
       <description>表格标签#标签 说明 &amp;lt;table&amp;gt; 定义表格 &amp;lt;tr&amp;gt; 定义表格行 &amp;lt;td&amp;gt; 定义表格单元格 &amp;lt;th&amp;gt; 定义表头单元格 &amp;lt;caption&amp;gt; 定义表格标题 &amp;lt;thead&amp;gt; 定义表格页眉 &amp;lt;tbody&amp;gt; 定义表格主体 &amp;lt;tfoot&amp;gt; 定义表格页脚 标签属性#&amp;lt;table&amp;gt;
 width：表格宽度 border：边框宽度 cellspacing：单元格间距 cellpadding：单元格与内容间距 &amp;lt;td&amp;gt;、&amp;lt;th&amp;gt;
 colspan：单元格横跨几列 rowspan：单元格横跨几行 共同属性#属性属性值属性值说明水平对齐：alignleft左对齐（默认）right右对齐center居中对齐justify拉伸对齐char对齐指定字符垂直对齐：valigntop顶部对齐（默认）middle居中对齐bottom底部对齐baseline基线对齐示例#&amp;lt;table border=&amp;#34;1&amp;#34; width=&amp;#34;70%&amp;#34; cellspacing=&amp;#34;0&amp;#34;&amp;gt; &amp;lt;caption&amp;gt;表格标题&amp;lt;/caption&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;th&amp;gt;北京&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;上海&amp;lt;/th&amp;gt; &amp;lt;th&amp;gt;广州&amp;lt;/th&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt;...&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;.</description>
@@ -56,10 +56,10 @@ colspan：单元格横跨几列 rowspan：单元格横跨几行 共同属性#�
     
     <item>
       <title>表单标签</title>
-      <link>https://ardadata.github.io/docs/old/WebPage/html/form/</link>
+      <link>https://jetdaline.github.io/docs/old/WebPage/html/form/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/WebPage/html/form/</guid>
+      <guid>https://jetdaline.github.io/docs/old/WebPage/html/form/</guid>
       <description>&amp;lt;form&amp;gt;#属性 描述 accept-charset 字符集 action 提交目的地 URL method 提交方式，get、post target 打开方式，_blank 、_self、 _parent 、_top &amp;lt;form action=&amp;#34;xxx.php&amp;#34; method=&amp;#34;get&amp;#34;&amp;gt; 姓名：&amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;username&amp;#34; size=&amp;#34;15&amp;#34; placeholder=&amp;#34;请输入姓名&amp;#34; /&amp;gt; 密码：&amp;lt;input type=&amp;#34;password&amp;#34; name=&amp;#34;pwd&amp;#34; maxlength=&amp;#34;8&amp;#34; placeholder=&amp;#34;请输入密码&amp;#34; /&amp;gt; 照片：&amp;lt;input type=&amp;#34;file&amp;#34; name=&amp;#34;pic&amp;#34; /&amp;gt; 性别： &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;sex&amp;#34; value=&amp;#34;man&amp;#34; checked/&amp;gt;男 &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;sex&amp;#34; value=&amp;#34;woman&amp;#34; /&amp;gt;女 爱好： &amp;lt;input type=&amp;#34;checkbox&amp;#34; name=&amp;#34;hobby&amp;#34; value=&amp;#34;read&amp;#34; checked/&amp;gt;读书 &amp;lt;input type=&amp;#34;checkbox&amp;#34; name=&amp;#34;hobby&amp;#34; value=&amp;#34;dance&amp;#34; /&amp;gt; 跳舞 &amp;lt;input type=&amp;#34;checkbox&amp;#34; name=&amp;#34;hobby&amp;#34; value=&amp;#34;sing&amp;#34; /&amp;gt; 唱歌 城市: &amp;lt;select name=&amp;#34;city&amp;#34;&amp;gt; &amp;lt;option value=&amp;#34;0&amp;#34; selected&amp;gt;__请选择__&amp;lt;/option&amp;gt; &amp;lt;optgroup label=&amp;#34;北方&amp;#34;&amp;gt; &amp;lt;option value=&amp;#34;bj&amp;#34;&amp;gt;北京&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;tj&amp;#34;&amp;gt;天津&amp;lt;/option&amp;gt; &amp;lt;/optgroup&amp;gt; &amp;lt;optgroup label=&amp;#34;南方&amp;#34;&amp;gt; &amp;lt;option value=&amp;#34;gz&amp;#34;&amp;gt;广州&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;sz&amp;#34;&amp;gt;深圳&amp;lt;/option&amp;gt; &amp;lt;/optgroup&amp;gt; &amp;lt;/select&amp;gt; 备注： &amp;lt;textarea name=&amp;#34;tips&amp;#34; cols=&amp;#34;5&amp;#34; rows=&amp;#34;5&amp;#34;&amp;gt; 这是一段多行文字 &amp;lt;/textarea&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;input&amp;gt;#type 描述 hidden 隐藏 text 文本域 password 密码域 radio 单选框 checkbox 复选框 file 文件输入框 image 图片输入框 button 按钮 reset 重置按钮 submit 提交按钮 &amp;lt;select&amp;gt;#定义下拉列表 &amp;lt;select name=&amp;#34;cars&amp;#34;&amp;gt; &amp;lt;option value=&amp;#34;volvo&amp;#34;&amp;gt;Volvo&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;saab&amp;#34;&amp;gt;Saab&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;fiat&amp;#34;&amp;gt;Fiat&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;audi&amp;#34;&amp;gt;Audi&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;textarea&amp;gt;#定义多行文本 &amp;lt;textarea name=&amp;#34;message&amp;#34; rows=&amp;#34;10&amp;#34; cols=&amp;#34;30&amp;#34;&amp;gt; The cat was playing in the garden.</description>
     </item>
     

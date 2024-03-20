@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>网络基础 on IWiki</title>
-    <link>https://ardadata.github.io/docs/network/basic/</link>
-    <description>Recent content in 网络基础 on IWiki</description>
+    <title>计算机网络 on IWiki</title>
+    <link>https://jetdaline.github.io/docs/network/basic/</link>
+    <description>Recent content in 计算机网络 on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="https://ardadata.github.io/docs/network/basic/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="https://jetdaline.github.io/docs/network/basic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网络模型</title>
+      <link>https://jetdaline.github.io/docs/network/basic/network-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jetdaline.github.io/docs/network/basic/network-model/</guid>
+      <description>网络模型#网络协议#是指双方实体完成通信或服务所必须遵循的规则和约定 网络协议分层#</description>
+    </item>
+    
+    <item>
+      <title>RPC</title>
+      <link>https://jetdaline.github.io/docs/network/basic/rpc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jetdaline.github.io/docs/network/basic/rpc/</guid>
+      <description>RPC#Remote Procedure Call，远程过程调用 是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议 RPC 使得程序能够像访问本地系统资源一样，去访问远端系统资源 主流 RPC 框架：Dubbo/Dubbox、Google gRPC、Spring Boot/Spring Cloud RPC 组件#客户端(Client)	服务调用者 客户端存根(Client Stub)	存放服务端地址信息，将客户端的请求参数数据信息打包成网络消息，再通过网络传输发送给服务端 服务端存根(Server Stub)	接收客户端发送过来的请求消息并进行解包，然后再调用本地服务进行处理 服务端(Server)	服务提供者 RPC 原理#RPC 架构#</description>
+    </item>
+    
   </channel>
 </rss>

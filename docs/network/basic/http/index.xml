@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on IWiki</title>
+    <link>https://jetdaline.github.io/docs/network/basic/http/</link>
+    <description>Recent content in HTTP on IWiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language><atom:link href="https://jetdaline.github.io/docs/network/basic/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>报文</title>
+      <link>https://jetdaline.github.io/docs/network/basic/http/http-msg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jetdaline.github.io/docs/network/basic/http/http-msg/</guid>
+      <description>HTTP 报文#报文格式#请求方式#GET 返回请求路径所对应的资源。 POST 向请求路径提交数据，创建新的资源。 PUT 更新请求路径所对应的资源。 DELETE 删除请求路径所对应的资源。 HEAD 不需要返回资源，仅返回响应行和响应头即可。 PATCH 更新请求路径所对应的部分资源。 OPTIONS 获取请求路径对应资源的信息（是否可可跨域获取，可以支持哪些请求方式等）。 TRACE 直接返回请求，主要用于测试。 媒体类型#Content-Type，用于定义请求和响应中的媒体类型信息 类型 描述 类型 描述 text/html HTML格式 application/xhtml+xml XHTML格式 text/plain 纯文本格式 application/xml XML数据格式 text/xml XML格式 application/json JSON数据格式 image/gif gif图片格式 application/pdf pdf格式 image/jpeg jpg图片格式 application/msword Word文档格式 image/png png图片格式 application/octet-stream 二进制流数据 multipart/form-data 表单文件上传 application/x-www-form-urlencoded 表单key/value格式 </description>
+    </item>
+    
+    <item>
+      <title>状态码</title>
+      <link>https://jetdaline.github.io/docs/network/basic/http/http-status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jetdaline.github.io/docs/network/basic/http/http-status/</guid>
+      <description>HTTP 状态码#状态码#HTTP Status Code 由三位数字代码组成，用于表示HTTP请求的处理结果和状态 状态码分类#状态码 含义 描述 1xx 消息响应 服务器收到请求，需要请求者继续执行操作 2xx 成功响应 操作被成功接收并处理 3xx 重定向 需要进一步的操作以完成请求 4xx 客户端错误 请求包含语法错误或无法完成请求 5xx 服务器错误 服务器在处理请求的过程中发生了错误 常见状态码#消息响应
+100 Continue 继续 101 Switching Protocol 切换协议 成功响应
+200 OK 成功 201 Created 已创建 202 Accepted 已创建 203 Non-Authoritative Information 未授权信息 204 No Content 无内容 205 Reset Content 重置内容 206 Partial Content 部分内容 重定向
+300 Multiple Choice 多种选择 301 Moved Permanently 永久移动 302 Found 临时移动 303 See Other 查看其他位置 304 Not Modified 未修改 305 Use Proxy 使用代理 306 unused 未使用 307 Temporary Redirect 临时重定向 308 Permanent Redirect 永久重定向 客户端错误</description>
+    </item>
+    
+    <item>
+      <title>HTTPS</title>
+      <link>https://jetdaline.github.io/docs/network/basic/http/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jetdaline.github.io/docs/network/basic/http/https/</guid>
+      <description>HTTPS 协议#HTTPS#Hypertext Transfer Protocol Secure，超文本传输安全协议 是由 SSL+HTTP 协议构建的可进行加密传输、身份认证的网络协议 主要作用：数据保密性、数据完整性、身份校验安全性 默认端口：443 工作原理#HTTPS 优点#使用 HTTPS 协议可认证用户和服务器，确保数据发送到正确的客户机和服务器； HTTPS 要比 HTTP 协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。 HTTPS 是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。 谷歌曾称“比起同等 HTTP 网站，采用 HTTPS 加密的网站在搜索结果中的排名将会更高”。 HTTPS 缺点#HTTPS 协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电； HTTPS 连接缓存不如 HTTP 高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响； SSL 证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。 SSL 证书通常需要绑定 IP，不能在同一 IP 上绑定多个域名，IPv4 资源不可能支撑这个消耗。 HTTPS 协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL 证书的信用链体系并不安全，特别是在某些国家可以控制 CA 根证书的情况下，中间人攻击一样可行。 </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gradle on IWiki</title>
-    <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/</link>
+    <link>https://jetdaline.github.io/docs/old/ProgramBasic/tools/gradle/</link>
     <description>Recent content in Gradle on IWiki</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jetdaline.github.io/docs/old/ProgramBasic/tools/gradle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>配置</title>
-      <link>https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/config/</link>
+      <link>https://jetdaline.github.io/docs/old/ProgramBasic/tools/gradle/config/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://ardadata.github.io/docs/old/ProgramBasic/tools/gradle/config/</guid>
+      <guid>https://jetdaline.github.io/docs/old/ProgramBasic/tools/gradle/config/</guid>
       <description>工作原理#Android 配置#Android Studio打开一个工程时，首先会读取gradle-wrapper.properties 文件，获知gradle版本
 然后去 GRADLE_USER_HOME 文件夹，查看是否存在对应版本的gradle
 如果不存在，则会去 distributionUrl 去下载gradle
